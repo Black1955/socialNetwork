@@ -1,0 +1,33 @@
+@import "../../assets/variables.module.scss";
+
+.Button {
+  border-radius: 25px;
+  padding: 10px 15px;
+  color: $WHITE;
+  cursor: pointer;
+  background-color: $WHITE;
+}
+
+.Orange {
+  background-color: $YELLOW-ORANGE;
+}
+.Black {
+  background-color: $JET;
+}
+.BorderBlack {
+  color: $JET;
+  border: 1px solid $JET;
+}
+.BorderOrange {
+  color: $YELLOW-ORANGE;
+  border: 1px solid $YELLOW-ORANGE;
+}
+.Gray {
+  background-color: $BABY-POWDER;
+  border: none;
+  transition: all 0.5s;
+}
+.Gray:hover {
+  background-color: $WHITE;
+  color: red;
+}
