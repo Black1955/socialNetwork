@@ -1,0 +1,28 @@
+
+
+.input{
+    background: white;
+    width: 320px;
+    height: 17px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+}
+
+.BorderBlack{
+    border: 2.7px solid black
+}
+.BorderOrange{
+    border: 2.7px solid rgb(223, 128, 4)
+}
+.BorderRed{
+    border : 2.7px solid rgb(180, 1, 1)
+}
+.BorderGray{
+    border : 2.7px solid rgb(124, 124, 124)
+}
+.input::placeholder{
+    color: rgb(194, 194, 194); 
+    font-family: 'Readex Pro'; 
+}
