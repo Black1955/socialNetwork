@@ -1,6 +1,12 @@
 import "./App.scss";
-function App() {
-  return <div></div>;
+import { FC } from "react";
+import Input from "./ui/Input/Input";
+
+
+const  App:FC = () =>
+{
+  return <div >  </div>
+
 }
 
 export default App;
