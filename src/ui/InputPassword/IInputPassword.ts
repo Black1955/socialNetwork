@@ -1,7 +1,6 @@
-export interface IInput {
+export interface IInputPassword {
 placeholder:string;
 onChangeInput?():void;
 value:string;
-variant :  | 'Black' | 'Gray';
 border: 'BorderOrange'| 'BorderBlack' | 'BorderRed' | 'BorderGray';
 }

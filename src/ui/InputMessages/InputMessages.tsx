@@ -1,9 +1,9 @@
-
+import React, { useState } from 'react';
 import { FC } from "react";
 import { IInputMessages } from "./IInputMessages";
 import styles from './InputMessages.module.scss'
 import { BsFillEmojiSmileFill,BsFillSendFill} from 'react-icons/bs';
-import React, { useState } from 'react';
+
 
 
 const  InputMessages:FC<IInputMessages> = ({placeholder}) =>
