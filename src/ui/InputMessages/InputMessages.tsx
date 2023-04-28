@@ -24,9 +24,13 @@ const  InputMessages:FC<IInputMessages> = ({placeholder}) =>
 
   <div className={styles.nextInput}>
 
-    {value? <button className={styles.button}>
+    {
+    
+    value? <button className={styles.button}>
     <BsFillSendFill/>
-    </button>:null}
+    </button>:null
+    
+    }
    
   </div>
       </div>
