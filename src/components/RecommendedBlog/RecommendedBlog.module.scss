@@ -1,0 +1,47 @@
+@import '../../assets/variables.module.scss';
+.left{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    .text{
+        margin-left: 10px;
+    }
+}
+.userName{
+    font-size: 14px;
+    font-family: 'Readex Pro';
+}
+.desc{
+    font-size: 11px;
+    font-family: 'Readex Pro';
+    padding-top: 3px;
+    color: rgb(148, 148, 148);;
+}
+.blogWrapper{
+    max-width: 290px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 12px;
+    border-radius:7px;
+}
+h1,h2,h3,h4,h5,h6,p{
+    padding: 0;
+    margin: 0;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+}
+.button{
+    background: none;
+    color:$YELLOW-ORANGE;
+    cursor: pointer;
+    border: none;
+    margin-left: 2px;
+    margin-top: 5px;
+    font-size: 13px;
+    font-family: 'Readex Pro';
+}

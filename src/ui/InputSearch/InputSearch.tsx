@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { FC } from "react";
 import { IInputSearch } from './IInputSearch';
 import * as React from 'react';
-import { BsSearch } from "@react-icons/all-files/bs/BsSearch";
+import { BsSearch } from "react-icons/bs";
 
 const  InputSearch :FC<IInputSearch> = ({placeholder}) =>
 {
