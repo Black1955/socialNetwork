@@ -1,0 +1,36 @@
+@import "../../assets/variables.module.scss";
+
+.tab {
+  width: fit-content;
+  margin: 8px;
+  cursor: pointer;
+  display: block;
+}
+.radio {
+  appearance: none;
+}
+
+.text {
+  color: $DARK_GRAY;
+  margin-bottom: 5px;
+}
+.text:hover {
+  color: $PALE_ORANGE;
+}
+
+.line {
+  display: inline-block;
+  width: 100%;
+  height: 2px;
+  border-radius: 10px;
+  background-color: $YELLOW-ORANGE;
+  opacity: 0;
+  transition: 0.2s ease-out;
+}
+
+.radio:checked ~ .line {
+  opacity: 1;
+}
+.radio:checked ~ .text {
+  color: $YELLOW-ORANGE;
+}
