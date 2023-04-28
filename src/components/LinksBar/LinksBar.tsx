@@ -8,7 +8,7 @@ const LinksBar = () => {
   return (
     <div className={styles.LinksBar}>
       <Button
-        onClick={() => console.log("qwe")}
+        onClick={() => console.log("qwed")}
         text='Home'
         variant='Icon'
         icon={<AiFillHome />}
