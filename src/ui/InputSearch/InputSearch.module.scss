@@ -1,0 +1,30 @@
+
+.input{
+    background: white;
+    width: 320px;
+    height: 17px;
+    padding: 10px;
+    padding-left: 34px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+}
+.input::placeholder{
+    color: rgb(194, 194, 194); 
+    font-family: 'Readex Pro'; 
+}
+.button{
+     background: none;
+     position: absolute;
+     border:none;
+     top: 8px;
+     left: 5px;
+
+}
+.inputBlock{
+    position: relative;
+}
+.searchIcon{
+    width: 15px;
+    height: 17px;
+}
