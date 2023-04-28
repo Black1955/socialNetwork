@@ -6,13 +6,17 @@
   color: $WHITE;
   cursor: pointer;
   background-color: $WHITE;
+  font-size: 15px;
+  font-family: "Readex Pro", sans-serif;
 }
 
 .Orange {
   background-color: $YELLOW-ORANGE;
+  border: none;
 }
 .Black {
   background-color: $JET;
+  border: none;
 }
 .BorderBlack {
   color: $JET;
@@ -26,8 +30,21 @@
   background-color: $BABY-POWDER;
   border: none;
   transition: all 0.5s;
+  border: none;
 }
 .Gray:hover {
   background-color: $WHITE;
   color: red;
+}
+
+.Icon {
+  color: $JET;
+  background-color: none;
+  border: none;
+  //inherit
+}
+.WithoutBorder {
+  color: $PALE_ORANGE;
+  border: none;
+  background-color: none;
 }
