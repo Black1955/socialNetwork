@@ -1,4 +1,4 @@
-
+import {IComment} from "../Coments/IComents";
 
 export interface IPost {
 
@@ -9,6 +9,10 @@ export interface IPost {
     imgUrl:string;
     time:string;
     liked:boolean;
-    setLiked?():boolean;
-
+    setLiked?():void;
+    setComented?():void;
+    comented:boolean;
+    folowed:boolean;
+    setFolowed?():void;
+    coments:IComment[];
 };
