@@ -6,10 +6,10 @@ import {SlOptions} from 'react-icons/sl'
 import {AiFillHeart,AiOutlineHeart} from 'react-icons/ai'
 import {BsFillShareFill} from 'react-icons/bs'
 import {IoIosChatboxes} from 'react-icons/io'
+import Comments from "../Coments/Coments.tsx";
 
 
-
-const  Post:FC<IPost> = ({id,folowed,setLiked,setComented,comented,description,name,time,likes,imgUrl,liked}) =>
+const  Post:FC<IPost> = ({id,folowed,setLiked,setComented,coments,comented,description,name,time,likes,imgUrl,liked}) =>
 {
 
 
@@ -55,7 +55,18 @@ const  Post:FC<IPost> = ({id,folowed,setLiked,setComented,comented,description,n
                
                
             </footer>
+            <div className={styles.wrapper}>
+            
+            {comented?
+            <div className={styles.postComents}>
+                <h2>Comments <span>({coments.length})</span></h2>
+                <Comments descr="You pet very good 🥰" userName="vasya" time={"2d"} liked={true} likes={123} setLiked={()=>{}}/>
+            </div>
+           :null}
+            </div>
+        
      </div>
+     
 
 }
 

@@ -33,6 +33,7 @@ button{
     }
 }
 .post{
+
     border-radius: 30px;
     background: #ffffff;
     padding: 10px 0px;
@@ -65,10 +66,25 @@ img{
         font-size: 14px;
     }
 }
-
+.postComents{
+    width: 100%;
+    h2{
+        font-size: 20px;
+        color: $JET;
+        margin-top: 15px;
+        margin-bottom: 12px;
+        font-weight: 500;
+        span{
+            color: $GRAY;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    }
+}
 .setting{
     padding: 0px 16px 10px 16px;
     display: flex;
+    border-bottom: 1px solid $LIGHT_GRAY;
     justify-content: space-between;
 
     button{
