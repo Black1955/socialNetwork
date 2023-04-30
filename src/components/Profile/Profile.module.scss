@@ -1,0 +1,62 @@
+@import "/src/assets/variables.module.scss";
+
+.profile {
+  width: 800px;
+  border-radius: 15px;
+  .wrapper {
+    margin: 15px;
+  }
+  .background {
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .profilePhoto {
+    position: absolute;
+    border: 4px solid white;
+    border-radius: 50%;
+    display: inline-block;
+    top: 180px;
+  }
+  .information {
+    margin: 35px 0px;
+    display: flex;
+    .nickName,
+    .name {
+      margin-bottom: 15px;
+    }
+    .nickName {
+      color: $DARK_GRAY;
+    }
+    .description {
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .followInformation {
+      margin-left: auto;
+      .qwe {
+        margin-left: 0;
+      }
+      .follow {
+        margin-top: 20px;
+        display: flex;
+
+        .followSection {
+          margin-left: 10px;
+
+          .numbers {
+            font-size: 25px;
+            font-weight: 600;
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+  }
+}

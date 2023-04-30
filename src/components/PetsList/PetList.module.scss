@@ -1,0 +1,9 @@
+@import "/src/assets/variables.module.scss";
+
+.amountOfPets {
+  color: $LIGHT_GRAY;
+}
+
+.petList {
+  display: flex;
+}
