@@ -5,7 +5,7 @@ import logo from '../../assets/logo.png'
 import InputPassword from '../../ui/InputPassword/InputPassword';
 import Input from '../../ui/Input/Input';
 import { Link } from 'react-router-dom';
-const Login: FC<ILogin> = ({email,password,setEmail,setPassword}) => {
+const Login: FC<ILogin> = () => {
   return (
   
   <form className={styles.login}>
