@@ -3,7 +3,7 @@ import { FC } from "react";
 import { IPost } from "./IPost.ts";
 import styles from "./Post.module.scss"
 import {SlOptions} from 'react-icons/sl'
-import {AiFillHeart,AiOutlineHeart} from 'react-icons/ai'
+import {AiFillHeart} from 'react-icons/ai'
 import {BsFillShareFill} from 'react-icons/bs'
 import {IoIosChatboxes} from 'react-icons/io'
 import Comments from "../Coments/Coments.tsx";
@@ -60,7 +60,7 @@ const  Post:FC<IPost> = ({id,folowed,setLiked,setComented,coments,comented,descr
             {comented?
             <div className={styles.postComents}>
                 <h2>Comments <span>({coments.length})</span></h2>
-                <Comments descr="You pet very good 🥰" userName="vasya" time={"2d"} liked={true} likes={123} setLiked={()=>{}}/>
+                <Comments descr="You pet very good 🥰" userName="vasya" time={"2d"} liked={true} likes={123} setLiked={()=>{}} logoUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzHQv_th9wq3ivQ1CVk7UZRxhbPq64oQrg5Q&usqp=CAU"/>
             </div>
            :null}
             </div>

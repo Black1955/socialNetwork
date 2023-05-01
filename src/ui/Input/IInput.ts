@@ -3,5 +3,5 @@ placeholder:string;
 onChangeInput?():void;
 value:string;
 variant :  | 'Black' | 'Gray';
-border: 'BorderOrange'| 'BorderBlack' | 'BorderRed' | 'BorderGray';
+border?: 'BorderOrange'| 'BorderBlack' | 'BorderRed' | 'BorderGray'|"BorderWhite";
 }

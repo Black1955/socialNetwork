@@ -1,8 +1,10 @@
 import "./App.scss";
 import { FC } from "react";
-import "./App.scss";
+import Login from "./components/Login/Login";
 const App: FC = () => {
-  return <div></div>;
-};
+  return <div>
+   <Login email={"babadid346@gmail.com"} password={"12345678"} setEmail={()=>{}} setPassword={()=>{}}/>
+  </div>;
+}
 
 export default App;

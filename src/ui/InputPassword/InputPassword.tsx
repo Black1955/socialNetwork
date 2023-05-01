@@ -10,7 +10,7 @@ const  InputPassword :FC<IInputPassword> = ({placeholder,border}) =>
  console.log(value)
   return (
 
-    <input type="text" className={`${styles.input}   ${styles[border]}`} value={value}  onChange={(e:React.ChangeEvent<HTMLInputElement>)=>{setValue(e.target.value)}} placeholder={placeholder} />
+    <input type="password" className={`${styles.input}   ${styles[border]}`} value={value}  onChange={(e:React.ChangeEvent<HTMLInputElement>)=>{setValue(e.target.value)}} placeholder={placeholder} />
   );
 }
 
