@@ -1,10 +1,11 @@
 import "./App.scss";
 import { FC } from "react";
-import Header from "./components/Header/Header";
+import Home from "./pages/Home/Home";
+
 
 const App: FC = () => {
   return <div>
-   <Header/>
+   <Home/>
   </div>;
 }
 
