@@ -1,11 +1,10 @@
 import "./App.scss";
 import { FC } from "react";
-import Header from "./components/Header/Header";
+import Login from "./components/Login/Login";
 const App: FC = () => {
   return <div>
-   <Header/>
+   <Login email={"babadid346@gmail.com"} password={"12345678"} setEmail={()=>{}} setPassword={()=>{}}/>
   </div>;
 }
 
 export default App;
-

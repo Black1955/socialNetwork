@@ -9,7 +9,11 @@ const Button: FC<IButton> = ({ text, onClick, variant, icon }) => {
   ) : (
     <button onClick={onClick} className={`${styles.Button} ${styles[variant]}`}>
       <div style={{ display: "flex", alignItems: "center" }}>
-        <div style={{ marginRight: "10px" }}>{icon}</div>
+        <div
+          style={{ marginRight: "10px", display: "flex", alignItems: "center" }}
+        >
+          {icon}
+        </div>
         <div>{text}</div>
       </div>
     </button>
