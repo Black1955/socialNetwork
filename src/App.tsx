@@ -1,13 +1,15 @@
 import "./App.scss";
-import { FC } from "react";
-import Home from "./pages/Home/Home";
+import { FC, useState } from "react";
+import SignUpForm from "./components/SignUp/SignUpForm";
 
-
+import "./App.scss";
 const App: FC = () => {
-  return <div>
-   <Home/>
-  </div>;
-}
+ 
 
+  return <div>
+    <SignUpForm   />
+
+  </div>;
+};
 
 export default App;
