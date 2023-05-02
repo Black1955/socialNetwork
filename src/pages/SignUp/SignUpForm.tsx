@@ -1,12 +1,11 @@
 import styles from './SignUpForm.module.scss'
 import { FC,useState } from "react";
-import {ISignUpForm} from './ISignUpForm'
 import logo from '../../assets/logo.png'
 import InputPassword from '../../ui/InputPassword/InputPassword';
 import Input from '../../ui/Input/Input';
 
 
-const SignUpForm: FC<ISignUpForm> = () => {
+const SignUpForm: FC = () => {
 
   const [email,setEmail]=useState('')
   const [password,setPassword]=useState('')
