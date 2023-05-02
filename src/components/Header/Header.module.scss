@@ -6,53 +6,25 @@
     display: flex;
     align-items: center;
   }
-  .nav {
-    display: flex;
-    align-items:center;
-  }
 }
 .logoSvg{
   margin-right: 150px;
 }
-.icon{
-  margin-right: 15px;
-}
-.avatar{
-  margin-right: 15px;
-}
-.links{
-  display: flex;
-  align-items:center;
-}
 @media screen and (max-width:980px) {
-  .logoSvg{
-    margin-right: 50px;
-  }
   .logo{
     img{
       width: 100px;
       height: 35px;
     }
   }
- 
+  .logoSvg{
+    margin-right: 100px;
+  }
 }
 @media screen and (max-width:720px) {
    .arrow{
     margin-top: 15px;
     margin-right: 40px;
-  }
-  .nav{
-    flex-direction: column;
-    position: absolute;
-    right: 10px;
-    background: rgb(240, 240, 240);
-    padding: 5px;
-    border-radius:3px;
-    top: 38px;
-
-  }
-  .links{
-    margin-bottom: 10px;
   }
   .avatar{
     margin-right: 0;
@@ -63,20 +35,7 @@
   }
   }
 }
-@media screen and (max-width:580px) {
-  .nav{
-    top: 35px;
-  }
-}
-@media screen and (max-width:500px) {
-
-  .nav{
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 3px 25px;
-    top: 62px;
-    left: 30px;
-  }
+@media screen and (max-width:540px) {
   .arrow{
     position: absolute;
     left: 10px;
@@ -85,13 +44,12 @@
     height: 20px;
     
   }
-  .links{
-    margin-bottom: 0;
-  }
   .avatar{
     margin-right: 70px;
   }
-
+  .logoSvg{
+    margin-right: 60px;
+  }
 }
 @media screen and (max-width:385px) {
   .logo img {

@@ -2,7 +2,7 @@
 
 .input{
     background: white;
-    width: 320px;
+    width: 400px;
     height: 17px;
     padding: 10px;
     border: none;
@@ -21,6 +21,9 @@
 }
 .BorderGray{
     border : 2.7px solid rgb(124, 124, 124)
+}
+.BorderWhite{
+    border : 2.7px solid rgb(255, 255, 255)
 }
 .input::placeholder{
     color: rgb(194, 194, 194); 

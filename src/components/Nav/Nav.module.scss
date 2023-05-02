@@ -1,0 +1,56 @@
+.nav {
+    display: flex;
+    align-items:center;
+}
+.avatar{
+    margin-right: 15px;
+  }
+  .links{
+    display: flex;
+    align-items:center;
+}
+.icon{
+    margin-right: 15px;
+}
+@media screen and (max-width:980px) {
+    .logo{
+      img{
+        width: 100px;
+        height: 35px;
+      }
+    }
+   
+}
+@media screen and (max-width:720px) {
+   .nav{
+     flex-direction: column;
+     position: absolute;
+     right: 10px;
+     background: rgb(240, 240, 240);
+     padding: 5px;
+     border-radius:3px;
+     top: 38px;
+ 
+   }
+   .links{
+     margin-bottom: 10px;
+   }
+}
+@media screen and (max-width:580px) {
+    .nav{
+      top: 35px;
+    }
+}
+@media screen and (max-width:540px) {
+    .nav{
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 3px 25px;
+      top: 62px;
+      left: 30px;
+    }
+    .links{
+      margin-bottom: 0;
+    }
+  
+}

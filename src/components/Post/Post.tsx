@@ -95,6 +95,7 @@ const Post: FC<IPost> = ({
               liked={true}
               likes={123}
               setLiked={() => {}}
+              logoUrl=''
             />
           </div>
         ) : null}
