@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { IProfile } from "./IProfile";
-import styles from "./Profile.module.scss";
+import { IProfile } from "./IProfileBlock";
+import styles from "./ProfileBlock.module.scss";
 import Button from "../../ui/Button/Button";
 import { TbSettings } from "react-icons/tb";
 import PetList from "../PetsList/PetList";
@@ -10,7 +10,7 @@ import foto from "../../assets/person.png";
 import Avatar from "../../ui/Avatar/Avatar";
 //
 
-const Profile: FC<IProfile> = ({ id }) => {
+const ProfileBlock: FC<IProfile> = ({ id }) => {
   return (
     <div className={styles.profile}>
       <div
@@ -56,4 +56,4 @@ const Profile: FC<IProfile> = ({ id }) => {
   );
 };
 
-export default Profile;
+export default ProfileBlock;

@@ -1,6 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import { IPosts } from "./IPosts";
 import Tab from "../../ui/Tab/Tab";
+import styles from "./Posts.module.scss";
 import Post from "../Post/Post";
 const Posts: FC<IPosts> = ({ tabs, posts }) => {
   const [valueTab, setValueTab] = useState<string>(tabs[0].value);
@@ -10,7 +11,7 @@ const Posts: FC<IPosts> = ({ tabs, posts }) => {
   }, [valueTab]);
 
   return (
-    <div>
+    <div className={styles.tabs}>
       <div style={{ display: "flex" }}>
         {tabs.map(tab => (
           <Tab
@@ -23,7 +24,7 @@ const Posts: FC<IPosts> = ({ tabs, posts }) => {
           />
         ))}
       </div>
-      <div>
+      <div className={styles.posts}>
         {posts ? (
           posts.map(post => (
             <Post

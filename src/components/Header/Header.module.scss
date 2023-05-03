@@ -1,5 +1,6 @@
 .header {
   display: flex;
+  background-color: #fff;
   justify-content: space-between;
   .logo {
     margin-right: 150px;
@@ -7,58 +8,57 @@
     align-items: center;
   }
 }
-.logoSvg{
+.logoSvg {
   margin-right: 150px;
 }
-@media screen and (max-width:980px) {
-  .logo{
-    img{
+@media screen and (max-width: 980px) {
+  .logo {
+    img {
       width: 100px;
       height: 35px;
     }
   }
-  .logoSvg{
+  .logoSvg {
     margin-right: 100px;
   }
 }
-@media screen and (max-width:720px) {
-   .arrow{
+@media screen and (max-width: 720px) {
+  .arrow {
     margin-top: 15px;
     margin-right: 40px;
   }
-  .avatar{
+  .avatar {
     margin-right: 0;
   }
-  .header{
-    .logo{
-    margin-right: 0;
-  }
+  .header {
+    .logo {
+      margin-right: 0;
+    }
   }
 }
-@media screen and (max-width:540px) {
-  .arrow{
+@media screen and (max-width: 540px) {
+  .arrow {
     position: absolute;
     left: 10px;
     top: 55px;
     width: 20px;
     height: 20px;
-    
   }
-  .avatar{
+  .avatar {
     margin-right: 70px;
   }
-  .logoSvg{
+  .logoSvg {
     margin-right: 60px;
   }
 }
-@media screen and (max-width:385px) {
+@media screen and (max-width: 385px) {
   .logo img {
     width: 72px;
     height: 30px;
+  }
 }
-}
-@media screen and (max-width:360px) {
-  .logo  {
+@media screen and (max-width: 360px) {
+  .logo {
     margin-right: 70px;
-}
+  }
 }

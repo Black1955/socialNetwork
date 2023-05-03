@@ -1,0 +1,12 @@
+@import "../../assets/variables.module.scss";
+
+.wrapper {
+  max-width: 1400px;
+  margin: 0 80px;
+  .main {
+    display: flex;
+  }
+  .bar {
+    margin-top: 40px;
+  }
+}

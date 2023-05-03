@@ -2,13 +2,12 @@ import { FC } from "react";
 import { IPost } from "./IPost.ts";
 import styles from "./Post.module.scss";
 import { SlOptions } from "react-icons/sl";
-import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { AiFillHeart } from "react-icons/ai";
 import { BsFillShareFill } from "react-icons/bs";
 import { IoIosChatboxes } from "react-icons/io";
 import Comments from "../Coments/Coments.tsx";
 
 const Post: FC<IPost> = ({
-  id,
   folowed,
   setLiked,
   setComented,
