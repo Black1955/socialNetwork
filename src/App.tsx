@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { FC, lazy } from "react";
 import "./App.scss";
 import Layout from "./components/Layout/Layout";
+import Explore from "./pages/Exploer/Explore";
 const Home = lazy(() => import("./pages/Home/Home"));
 const Profile = lazy(() => import("./pages/Profile/Profile"));
 const SignIn = lazy(() => import("./pages/Login/Login"));
@@ -15,7 +16,7 @@ const App: FC = () => {
           <Route index element={<Home />} />
           <Route path='profile' element={<Profile />} />
           <Route path='massages' />
-          <Route path='explore' />
+          <Route path='explore' element={<Explore/>} />
           <Route path='settings' />
         </Route>
         <Route path='/signin' element={<SignIn />} />

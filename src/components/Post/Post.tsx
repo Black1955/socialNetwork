@@ -19,9 +19,11 @@ const Post: FC<IPost> = ({
   likes,
   imgUrl,
   liked,
+
+  
 }) => {
   return (
-    <div className={styles.post}>
+    <div  className={styles.post} >
       <header className={styles.header}>
         <div className={styles.wrapper}>
           <div className={styles.left}>
@@ -40,7 +42,7 @@ const Post: FC<IPost> = ({
         </div>
       </header>
       <div className={styles.img}>
-        <img src={imgUrl} alt='' />
+        <img className={styles.img}src={imgUrl} alt='' />
       </div>
       <footer>
         <div className={styles.wrapper}>

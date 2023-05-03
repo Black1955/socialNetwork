@@ -1,12 +1,17 @@
 @import "../../assets/variables.module.scss";
 
 .wrapper {
-  max-width: 1400px;
-  margin: 0 80px;
+ 
+  
+  padding: 0 30px;
   .main {
     display: flex;
   }
   .bar {
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-right: 20px;
+  }
+  .outlet{
+    width: 100%;
   }
 }

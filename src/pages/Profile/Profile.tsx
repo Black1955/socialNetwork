@@ -79,9 +79,9 @@ const Profile: FC = () => {
   return (
     <div className={styles.profile}>
       <ProfileBlock id='q' />
-      <div>
+      <div className={styles.content}>
         <Posts tabs={tabs} posts={mockPosts} />
-        <ProfileList profiles={profiles} title='recomend for you' />
+        <ProfileList profiles={profiles} title='Recomend for you' width={400}/>
       </div>
     </div>
   );
