@@ -8,7 +8,6 @@ import PetList from "../PetsList/PetList";
 import photo from "../../img.jpg";
 import foto from "../../assets/person.png";
 import Avatar from "../../ui/Avatar/Avatar";
-//
 
 const ProfileBlock: FC<IProfile> = ({ id }) => {
   return (
