@@ -5,8 +5,9 @@ import styles from "./Layout.module.scss";
 const Layout = () => {
   return (
     <div className={styles.layout}>
+       <Header />
       <div className={styles.wrapper}>
-        <Header />
+       
         <div className={styles.main}>
           <div className={styles.bar}>
             <LinksBar />

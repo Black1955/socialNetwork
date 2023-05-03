@@ -33,7 +33,7 @@ const ProfileBlock: FC<IProfile> = ({ id }) => {
           </div>
           <div className={styles.followInformation}>
             <Button
-              text='edit profile'
+              text='Edit profile'
               variant='BorderBlack'
               icon={<TbSettings />}
             />
