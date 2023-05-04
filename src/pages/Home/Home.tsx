@@ -5,6 +5,7 @@ import styles from './Home.module.scss'
 import avatar from '../../assets/person.png'
 import Posts from "../../components/Posts/Posts";
 import RecommendedBlog from "../../ui/RecommendedBlog/RecommendedBlog";
+import Post from "../../components/Post/Post";
 
 const Home:FC = () => {
 
@@ -92,15 +93,25 @@ const Home:FC = () => {
               <h2 className={styles.title}>Check out this blogs</h2>
               <div>
                 <div className={styles.blog}>
-                   <RecommendedBlog userName="Maks" desc="My manager Denis" width={350}/>
+                   <RecommendedBlog userName="Maks" desc="My manager Denis" />
                 </div>
                
                 <div className={styles.blog}>
-                   <RecommendedBlog userName="Maks" desc="My manager Denis" width={350}/>
+                   <RecommendedBlog userName="Maks" desc="My manager Denis"/>
                 </div>
                 <div className={styles.blog}>
-                   <RecommendedBlog userName="Maks" desc="My manager Denis" width={350}/>
+                   <RecommendedBlog userName="Maks" desc="My manager Denis"/>
                 </div>
+              </div>
+            </div>
+            <div>
+            <h2 className={styles.title2}>Recomended for you</h2>
+              <div>
+                <div className={styles.blog}>
+                  <Post id='5' name='Hooray' description='Description of post 4' likes={40} liked={false}  imgUrl= "https://images.pexels.com/photos/2295744/pexels-photo-2295744.jpeg?cs=srgb&dl=pexels-alex-andrews-2295744.jpg&fm=jpg" time= "2 hours ago" comented = {false} folowed= {false} coments= {[]} />
+                </div>
+               
+                
               </div>
             </div>
         </div>

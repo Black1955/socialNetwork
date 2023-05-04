@@ -9,7 +9,6 @@ const ProfileList: FC<IProfileList> = ({ title, profiles,width }) => {
       <div className={styles.profiles}>
         {profiles.map(profile => (
           <RecommendedBlog
-            width={width}
             desc={profile.desc}
             userName={profile.userName}
             key={profile.userName}

@@ -12,10 +12,23 @@
 }
 .wrapper{
     display: flex;
+    justify-content: space-between;
 }
 .title{
     margin-bottom: 30px;
+    margin-top: 15px;
+}
+.title2{
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 .blog{
     margin-bottom: 10px;
+}
+.right{
+    max-width: 400px;
+    width: 100%;
+}
+.left{
+    width: 100%;
 }
