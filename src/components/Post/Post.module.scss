@@ -37,7 +37,7 @@ button {
 }
 .post {
   border-radius: 30px;
-  max-width: 750px;
+  width: 750px;
   height: auto;
   background: #ffffff;
   padding: 10px 0px;
@@ -45,6 +45,8 @@ button {
   -moz-box-shadow: 5px 9px 16px 3px rgba(191, 191, 191, 1);
   box-shadow: 5px 9px 16px 3px rgba(191, 191, 191, 1);
   margin: 20px 10px;
+  @media (max-width: 14) {
+  }
 }
 
 .img {
