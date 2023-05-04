@@ -7,6 +7,7 @@ const Home = lazy(() => import("./pages/Home/Home"));
 const Profile = lazy(() => import("./pages/Profile/Profile"));
 const SignIn = lazy(() => import("./pages/Login/Login"));
 const SignUp = lazy(() => import("./pages/SignUp/SignUpForm"));
+
 const App: FC = () => {
   return (
     <div className={styles.content}>
@@ -22,7 +23,7 @@ const App: FC = () => {
         <Route path='/signup' element={<SignUp />} />
       </Routes>
     </div>
-  );
+  )
 };
 
 export default App;
