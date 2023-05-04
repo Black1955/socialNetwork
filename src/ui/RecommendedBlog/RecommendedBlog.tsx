@@ -5,9 +5,9 @@ import { GrFormClose } from "react-icons/gr";
 import Avatar from "../Avatar/Avatar";
 import img from "../../img.jpg";
 
-const RecommendedBlog: FC<IReCommended> = ({ userName, desc, width }) => {
+const RecommendedBlog: FC<IReCommended> = ({ userName, desc }) => {
   return (
-    <div className={styles.blog} style={{width:width+'px'}}>
+    <div className={styles.blog}>
       <div className={styles.blogWrapper}>
         <div className={styles.left}>
           <Avatar width={45} height={45} url={img} />
