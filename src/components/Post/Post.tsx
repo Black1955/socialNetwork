@@ -1,11 +1,11 @@
 import { FC } from "react";
-import { IPost } from "./IPost.ts";
+import { IPost } from "./IPost";
 import styles from "./Post.module.scss";
 import { SlOptions } from "react-icons/sl";
 import { AiFillHeart } from "react-icons/ai";
 import { BsFillShareFill } from "react-icons/bs";
 import { IoIosChatboxes } from "react-icons/io";
-import Comments from "../Coments/Coments.tsx";
+import Comments from "../Coments/Coments";
 
 const Post: FC<IPost> = ({
   folowed,
