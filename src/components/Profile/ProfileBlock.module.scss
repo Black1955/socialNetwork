@@ -1,12 +1,11 @@
 @import "/src/assets/variables.module.scss";
 
 .profile {
+  max-width: 1200px;
+  border-radius: 15px;
   margin-left: 0px;
   margin-top: 18px;
-  padding: 20px 0px;
-  padding-top: 0px;
   background-color: white;
-  border-radius: 15px;
   .wrapper {
     margin: 15px;
   }
@@ -44,21 +43,13 @@
 
     .followInformation {
       margin-left: auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      .qwe {
-        margin-left: 0;
-      }
       .follow {
         margin-top: 20px;
         display: flex;
-        
 
         .followSection {
           margin-left: 10px;
-          
-          text-align: center;
+
           .numbers {
             font-size: 25px;
             font-weight: 600;
@@ -69,4 +60,3 @@
     }
   }
 }
-

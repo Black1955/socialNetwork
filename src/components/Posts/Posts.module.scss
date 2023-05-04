@@ -1,4 +1,5 @@
 .posts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(750px, auto));
+  grid-gap: 10px;
 }
