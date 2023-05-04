@@ -3,7 +3,7 @@ export interface  IAddBlog {
     url:string;
     type:string;
     text:string;
-    onChangeAdd(e:React.ChangeEvent<HTMLInputElement>):void;
+    onChangeAdd?(e:React.ChangeEvent<HTMLInputElement>):void;
     onKeyClick?(e:React.KeyboardEvent<HTMLInputElement>):void;
-    onClick?():void;
+    onClickShow?():void;
 }

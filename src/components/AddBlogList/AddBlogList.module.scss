@@ -1,9 +1,58 @@
+@import '../../assets/variables.module.scss';
+
 .item {
     display: flex;
    
     justify-content: space-between;
-    max-width: 300px;
+    max-width: 280px;
 }
 .ml{
     margin-left: 20px;
+}
+
+.blogText{
+    height: 0;
+    width: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+.transitionText::placeholder{
+    font-size: 22px;
+    
+}
+.wrapper{
+    width: 424px;
+}
+.blockShow{
+    position: relative;
+    left: -175px;
+    transition: all ease 1s;
+    opacity: 1;
+    width: 600px;
+}
+.transitionText{
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 130px;
+    padding-left: 20px;
+    width: 100%;
+    outline: none;
+    border-radius: 10px;
+    border:1px solid rgb(201, 201, 201);
+    font-size: 18px;
+   
+}
+.btn{
+    position: absolute;
+    right: -22px;
+    bottom: 1px;
+    border-radius: 0px 0px 10px 0px;
+    padding: 10px 40px;
+    outline: none;
+    border:none;
+    font-size: 15px;
+    font-family: 'Readex Pro';
+    background: $YELLOW-ORANGE;
+
 }

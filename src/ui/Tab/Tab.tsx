@@ -1,10 +1,11 @@
 import { FC } from "react";
 import styles from "./Tab.module.scss";
 import { ITub } from "./ITub";
-const Tab: FC<ITub> = ({ text, name, value, onChange }) => {
+const Tab: FC<ITub> = ({ text, name, value, onChange, selectedValue }) => {
   return (
     <label className={styles.tab}>
       <input
+        checked={selectedValue === value}
         type='radio'
         className={styles.radio}
         name={name}

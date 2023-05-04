@@ -1,14 +1,17 @@
-import { FC } from "react";
-import AddBlogList from "../../components/AddBlogList/AddBlogList";
-import Avatar from "../../ui/Avatar/Avatar";
-import styles from './Home.module.scss'
-import avatar from '../../assets/person.png'
+import { FC } from "react"
+import styles from './Explore.module.scss'
 import Posts from "../../components/Posts/Posts";
-import RecommendedBlog from "../../ui/RecommendedBlog/RecommendedBlog";
-
-const Home:FC = () => {
-
-     const tabs = [
+import ProfileList from "../../components/ProfileList/ProfileList";
+const Explore :FC = () => {
+  const profiles = [
+    { userName: "oleg", desc: "hallo, I am oleg" },
+    { userName: "aboba", desc: "hallo, I am oleg" },
+    { userName: "alex", desc: "hallo, I am oleg" },
+    { userName: "max", desc: "hallo, I am oleg" },
+    { userName: "aleX", desc: "hallo, I am oleg" },
+    { userName: "alwx", desc: "hallo, I am oleg" },
+  ];
+    const tabs = [
         {
           text: "For you",
           name: "For you",
@@ -73,40 +76,11 @@ const Home:FC = () => {
         },
       ];
 
-
     return (
-    <div className={styles.wrapper}>
-
-        <div className={styles.left}>
-            <div className={styles.blockAdd}>
-                <div className={styles.mr}>
-                  <Avatar width={70} height={70} url={avatar}/>  
-                </div>
-               
-                <AddBlogList/> 
-            </div>
-            <Posts tabs={tabs} posts={mockPosts} />
-        </div>   
-        <div className={styles.right}>
-            <div>
-              <h2 className={styles.title}>Check out this blogs</h2>
-              <div>
-                <div className={styles.blog}>
-                   <RecommendedBlog userName="Maks" desc="My manager Denis" width={350}/>
-                </div>
-               
-                <div className={styles.blog}>
-                   <RecommendedBlog userName="Maks" desc="My manager Denis" width={350}/>
-                </div>
-                <div className={styles.blog}>
-                   <RecommendedBlog userName="Maks" desc="My manager Denis" width={350}/>
-                </div>
-              </div>
-            </div>
+        <div>
+              <ProfileList profiles={profiles} title='Check out  these blogs' width={290}/>
+              <Posts tabs={tabs} posts={mockPosts} />
         </div>
-            
-    </div>
     )
 }
-
-export default Home;
+export default Explore;

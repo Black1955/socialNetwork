@@ -1,0 +1,15 @@
+.profiles {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+}
+
+.title {
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.profileList{
+  margin-top: 25px;
+}
