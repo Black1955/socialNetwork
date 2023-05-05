@@ -11,6 +11,7 @@ const Button: FC<IButton> = ({ text, onClick, variant, icon }) => {
       <div style={{ display: "flex", alignItems: "center" }}>
         <div
           style={{ marginRight: "10px", display: "flex", alignItems: "center" }}
+          className={styles.icon}
         >
           {icon}
         </div>

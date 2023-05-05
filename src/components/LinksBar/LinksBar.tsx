@@ -3,54 +3,54 @@ import { AiFillHome } from "react-icons/ai";
 import { BsPersonCircle } from "react-icons/bs";
 import { FaTelegramPlane, FaRegCompass } from "react-icons/fa";
 import { RiSettings5Fill } from "react-icons/ri";
-import styles from "./LinksBar.module.scss";
+import './LinksBar.scss'
 import Home from "../../pages/Home/Home";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const LinksBar = () => {
   return (
-    <div className={styles.LinksBar}>
-      <Link to={'/'}>
+    <div className='LinksBar'>
+      <NavLink to={'/'} className='link'>
       <Button
         onClick={() => console.log("qwed")}
-        text='Home'
+        text={window.innerWidth<980?'':'Home'}
         variant='Icon'
         icon={<AiFillHome />}
       />
-      </Link>
-      <Link to={'/profile'}>
+      </NavLink>
+      <NavLink to={'/profile'} className='link'>
       <Button
         onClick={() => console.log("qwe")}
-        text='Profile'
+        text={window.innerWidth<980?'':'Profile'}
         variant='Icon'
         icon={<BsPersonCircle />}
       />
-      </Link>
-      <Link to={'/massages'}>
+      </NavLink>
+      <NavLink to={'/massages'} className='link'>
       <Button
         onClick={() => console.log("qwe")}
-        text='Masseges'
+        text={window.innerWidth<980?'':'Masseges'}
         variant='Icon'
         icon={<FaTelegramPlane />}
       />
-      </Link>
+      </NavLink>
    
-      <Link to={'/explore'}>
+      <NavLink to={'/explore'} className='link'>
       <Button
         onClick={() => console.log("qwe")}
-        text='Explore'
+        text={window.innerWidth<980?'':'Explore'}
         variant='Icon'
         icon={<FaRegCompass />}
       />
-      </Link>
-      <Link to={'/settings'}>
+      </NavLink>
+      <NavLink to={'/settings'} className='link'>
       <Button
         onClick={() => console.log("qwe")}
-        text='Settings'
+        text={window.innerWidth<980?'':'Settings'}
         variant='Icon'
         icon={<RiSettings5Fill />}
       />
-      </Link>
+      </NavLink>
       
     </div>
   );

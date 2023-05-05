@@ -1,0 +1,17 @@
+@import '../../assets/variables.module.scss';
+
+.LinksBar {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+ 
+}
+a{
+  color: $JET;
+}  
+
+.active{
+  font-weight: 700;
+  color: $YELLOW-ORANGE;
+}
+
