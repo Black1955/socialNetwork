@@ -13,7 +13,7 @@ const LinksBar = () => {
       <NavLink to={'/'} className='link'>
       <Button
         onClick={() => console.log("qwed")}
-        text='Home'
+        text={window.innerWidth<980?'':'Home'}
         variant='Icon'
         icon={<AiFillHome />}
       />
@@ -21,7 +21,7 @@ const LinksBar = () => {
       <NavLink to={'/profile'} className='link'>
       <Button
         onClick={() => console.log("qwe")}
-        text='Profile'
+        text={window.innerWidth<980?'':'Profile'}
         variant='Icon'
         icon={<BsPersonCircle />}
       />
@@ -29,7 +29,7 @@ const LinksBar = () => {
       <NavLink to={'/massages'} className='link'>
       <Button
         onClick={() => console.log("qwe")}
-        text='Masseges'
+        text={window.innerWidth<980?'':'Masseges'}
         variant='Icon'
         icon={<FaTelegramPlane />}
       />
@@ -38,7 +38,7 @@ const LinksBar = () => {
       <NavLink to={'/explore'} className='link'>
       <Button
         onClick={() => console.log("qwe")}
-        text='Explore'
+        text={window.innerWidth<980?'':'Explore'}
         variant='Icon'
         icon={<FaRegCompass />}
       />
@@ -46,7 +46,7 @@ const LinksBar = () => {
       <NavLink to={'/settings'} className='link'>
       <Button
         onClick={() => console.log("qwe")}
-        text='Settings'
+        text={window.innerWidth<980?'':'Settings'}
         variant='Icon'
         icon={<RiSettings5Fill />}
       />

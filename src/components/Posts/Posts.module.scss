@@ -1,7 +1,6 @@
 .posts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(750px, auto));
-  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(500px, auto));
 }
 .tabs{
   width: 90%;
