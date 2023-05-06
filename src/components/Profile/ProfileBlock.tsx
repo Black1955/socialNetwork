@@ -18,7 +18,7 @@ const ProfileBlock: FC<IProfile> = ({ id }) => {
       ></div>
       <div className={styles.wrapper}>
         <div className={styles.profilePhoto}>
-          <Avatar url={foto} height={100} width={100} />
+          <Avatar url={foto} height={100} width={100} userId={id} />
         </div>
 
         <div className={styles.information}>

@@ -1,8 +1,9 @@
 .posts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-column-gap: 20px;
 }
-.tabs{
+.tabs {
   width: 90%;
   margin-right: 20px;
 }

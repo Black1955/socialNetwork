@@ -2,9 +2,9 @@ import { FC } from "react";
 import { IProfileList } from "./IProfileList";
 import styles from "./ProfileList.module.scss";
 import RecommendedBlog from "../../ui/RecommendedBlog/RecommendedBlog";
-const ProfileList: FC<IProfileList> = ({ title, profiles,width }) => {
+const ProfileList: FC<IProfileList> = ({ title, profiles }) => {
   return (
-    <div className={styles.profileList} >
+    <div className={styles.profileList}>
       <div className={styles.title}>{title}</div>
       <div className={styles.profiles}>
         {profiles.map(profile => (
@@ -12,6 +12,7 @@ const ProfileList: FC<IProfileList> = ({ title, profiles,width }) => {
             desc={profile.desc}
             userName={profile.userName}
             key={profile.userName}
+            userId={profile.userId}
           />
         ))}
       </div>

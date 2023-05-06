@@ -13,8 +13,6 @@ export interface IPost {
   comented: boolean;
   folowed: boolean;
   setFolowed?(): void;
-  
+  userId: string;
   coments: IComment[];
 }
-
-  

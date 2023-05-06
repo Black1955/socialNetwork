@@ -5,12 +5,12 @@ import ProfileBlock from "../../components/Profile/ProfileBlock";
 import styles from "./Profile.module.scss";
 const Profile: FC = () => {
   const profiles = [
-    { userName: "oleg", desc: "hallo, I am oleg" },
-    { userName: "aboba", desc: "hallo, I am oleg" },
-    { userName: "alex", desc: "hallo, I am oleg" },
-    { userName: "max", desc: "hallo, I am oleg" },
-    { userName: "aleX", desc: "hallo, I am oleg" },
-    { userName: "alwx", desc: "hallo, I am oleg" },
+    { userName: "oleg", desc: "hallo, I am oleg", userId: "qwe" },
+    { userName: "aboba", desc: "hallo, I am oleg", userId: "qwe" },
+    { userName: "alex", desc: "hallo, I am oleg", userId: "qwe" },
+    { userName: "max", desc: "hallo, I am oleg", userId: "qwe" },
+    { userName: "aleX", desc: "hallo, I am oleg", userId: "qwe" },
+    { userName: "alwx", desc: "hallo, I am oleg", userId: "qwe" },
   ];
   const tabs = [
     {
@@ -44,36 +44,42 @@ const Profile: FC = () => {
       name: "Post 1",
       description: "Description of post 1",
       likes: 10,
-      imgUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUg2I3K3dr3G5IXOyTXa0xdYtRzyUj3CpOR99dgwIaPEFNnGPjbcg3QmYabhJ-wffx-5c&usqp=CAU",
+      imgUrl:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUg2I3K3dr3G5IXOyTXa0xdYtRzyUj3CpOR99dgwIaPEFNnGPjbcg3QmYabhJ-wffx-5c&usqp=CAU",
       time: "2 hours ago",
       liked: false,
       comented: false,
       folowed: false,
       coments: [],
+      userId: "qew",
     },
     {
       id: "4",
       name: "Post 4",
       description: "Description of post 4",
       likes: 40,
-      imgUrl: "https://img.freepik.com/premium-photo/jaguar-is-jungle-with-green-background_867452-2179.jpg",
+      imgUrl:
+        "https://img.freepik.com/premium-photo/jaguar-is-jungle-with-green-background_867452-2179.jpg",
       time: "4 hours ago",
       liked: true,
       comented: false,
       folowed: true,
       coments: [],
+      userId: "qew",
     },
     {
       id: "3",
       name: "Post 5",
       description: "Description of post 4",
       likes: 40,
-      imgUrl: "https://img.freepik.com/free-photo/animal-nature-feline-mammal-undomesticated-cat-animals-in-the-wild-bengal-tiger-generative-ai_188544-9405.jpg",
+      imgUrl:
+        "https://img.freepik.com/free-photo/animal-nature-feline-mammal-undomesticated-cat-animals-in-the-wild-bengal-tiger-generative-ai_188544-9405.jpg",
       time: "4 hours ago",
       liked: true,
       comented: false,
       folowed: true,
       coments: [],
+      userId: "qew",
     },
   ];
   return (
@@ -81,7 +87,9 @@ const Profile: FC = () => {
       <ProfileBlock id='q' />
       <div className={styles.content}>
         <Posts tabs={tabs} posts={mockPosts} />
-        <ProfileList profiles={profiles} title='Recomend for you' width={400}/>
+        <div style={{ width: "400px" }}>
+          <ProfileList profiles={profiles} title='Recomend for you' />
+        </div>
       </div>
     </div>
   );

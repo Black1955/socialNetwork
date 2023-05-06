@@ -13,6 +13,7 @@
     .header {
       display: flex;
       padding: 10px 0;
+      align-items: center;
     }
   }
 
@@ -37,14 +38,6 @@
   .arrow {
     margin-top: 15px;
     margin-right: 40px;
-  }
-  .avatar {
-    margin-right: 0;
-  }
-  .header {
-    .logo {
-      margin-right: 0;
-    }
   }
 }
 @media screen and (max-width: 540px) {
