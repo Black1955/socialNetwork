@@ -5,7 +5,6 @@ import styles from "./Posts.module.scss";
 import Post from "../Post/Post";
 const Posts: FC<IPosts> = ({ tabs, posts }) => {
   const [valueTab, setValueTab] = useState<string>(tabs[0].value);
-  
 
   useEffect(() => {
     console.log(valueTab);
@@ -29,7 +28,6 @@ const Posts: FC<IPosts> = ({ tabs, posts }) => {
         {posts ? (
           posts.map(post => (
             <Post
-              
               id={post.id}
               comented={post.comented}
               coments={post.coments}
@@ -41,6 +39,7 @@ const Posts: FC<IPosts> = ({ tabs, posts }) => {
               name={post.name}
               time={post.time}
               key={post.id}
+              userId={post.userId}
             />
           ))
         ) : (

@@ -1,0 +1,27 @@
+.modal {
+  display: none;
+  right: 120%;
+  position: absolute;
+  background-color: #fff;
+  width: 360px;
+  border-radius: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.wrapper {
+  margin: 15px;
+}
+
+.active {
+  display: block;
+  @media (min-width: 1280px) {
+    right: 95px;
+  }
+  right: 10px;
+  top: 60px;
+}
+
+.tabs {
+  display: flex;
+}
