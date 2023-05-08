@@ -1,6 +1,10 @@
 @import '../../assets/variables.module.scss';
 .blog{
     max-width: 400px;
+    @media screen and (max-width:1130px) {
+        max-width: 1000px;
+    }
+    
 }
 .left{
     display: flex;
@@ -28,6 +32,9 @@
     background: white;
     padding: 17px;
     border-radius:7px;
+    @media screen and (max-width:1130px) {
+        max-width: 1000px;
+    }
 }
 h1,h2,h3,h4,h5,h6,p{
     padding: 0;

@@ -17,7 +17,7 @@ const PetList: FC<IPetList> = ({ pets = [] }) => {
           </div>
         </div>
       ) : (
-        <h2>you don`t have pets</h2>
+        <h2 className={styles.notHave}>you don`t have pets</h2>
       )}
     </div>
   );

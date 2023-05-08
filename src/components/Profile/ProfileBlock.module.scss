@@ -70,3 +70,53 @@
   }
 }
 
+
+@media screen and (max-width:980px) {
+  .profile{
+    margin-left: 10px;
+  }
+
+}
+@media screen and (max-width:800px) {
+  .infoFollow{
+   font-size: 14px;
+  }
+  .profile {
+    .profilePhoto{
+      top: 220px;
+      width: 70px;
+      height: 70px;
+      img{
+        width: 70px;
+        height: 70px;
+      }
+    }
+    .information{
+      .nickName,
+    .name {
+      margin-bottom: 10px;
+    }
+      .description {
+        font-size: 0.8rem;
+      }
+      h2{
+        font-size: 20px;
+      }
+      .followInformation{
+        button {
+          padding: 5px 10px;
+        }
+          .follow{
+      .followSection{
+        .numbers{
+          font-size: 20px;
+        }
+      }
+    }
+      }
+    
+    }
+    
+  }
+  
+}

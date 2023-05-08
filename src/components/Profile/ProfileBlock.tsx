@@ -40,11 +40,11 @@ const ProfileBlock: FC<IProfile> = ({ id }) => {
             <div className={styles.follow}>
               <div className={styles.followSection}>
                 <div className={styles.numbers}>2576</div>
-                <div>Followers</div>
+                <div className={styles.infoFollow}>Followers</div>
               </div>
               <div className={styles.followSection}>
                 <div className={styles.numbers}>345</div>
-                <div>Following</div>
+                <div className={styles.infoFollow}>Following</div>
               </div>
             </div>
           </div>

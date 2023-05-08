@@ -5,15 +5,16 @@ import styles from "./Layout.module.scss";
 const Layout = () => {
   return (
     <div className={styles.layout}>
-       <Header />
-      <div className={styles.wrapper}>
-       
-        <div className={styles.main}>
-          <div className={styles.bar}>
-            <LinksBar />
-          </div>
-          <div className={styles.outlet}>
-            <Outlet />
+      <Header />
+      <div className={styles.container}>
+        <div className={styles.wrapper}>
+          <div className={styles.main}>
+            <div className={styles.bar}>
+              <LinksBar />
+            </div>
+            <div className={styles.outlet}>
+              <Outlet />
+            </div>
           </div>
         </div>
       </div>

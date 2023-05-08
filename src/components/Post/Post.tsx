@@ -34,7 +34,7 @@ const Post: FC<IPost> = ({
             )}
           </div>
           <div className={styles.right}>
-            <p>{time}</p>
+            <p>{time} {window.innerWidth<1200?'h.r':'hours ago'}</p>
             <button className={styles.headerButton}>
               <SlOptions />
             </button>

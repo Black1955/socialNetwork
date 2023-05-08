@@ -1,16 +1,29 @@
-.header {
-  display: flex;
-  padding: 10px 30px;
+.background {
+  width: 100%;
   background-color: #fff;
-  justify-content: space-between;
+
+  .wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 80px;
+
+    @media (max-width: 1000px) {
+      padding: 0 40px;
+    }
+    .header {
+      display: flex;
+      padding: 10px 0;
+    }
+  }
+
   .logo {
-    margin-right: 150px;
-    display: flex;
-    align-items: center;
+    margin-right: 35px;
   }
 }
-.logoSvg {
-  margin-right: 150px;
+.nav {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 @media screen and (max-width: 980px) {
   .logo {
@@ -18,9 +31,6 @@
       width: 100px;
       height: 35px;
     }
-  }
-  .logoSvg {
-    margin-right: 100px;
   }
 }
 @media screen and (max-width: 720px) {
@@ -45,21 +55,10 @@
     width: 20px;
     height: 20px;
   }
-  .avatar {
-    margin-right: 70px;
-  }
-  .logoSvg {
-    margin-right: 60px;
-  }
 }
 @media screen and (max-width: 385px) {
   .logo img {
     width: 72px;
     height: 30px;
-  }
-}
-@media screen and (max-width: 360px) {
-  .logo {
-    margin-right: 70px;
   }
 }

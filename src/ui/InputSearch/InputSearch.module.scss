@@ -7,7 +7,7 @@
   border: none;
   outline: none;
   border-radius: 6px;
-  border:1px solid rgb(206, 206, 206);
+  border: 1px solid rgb(206, 206, 206);
 }
 .input::placeholder {
   color: rgb(194, 194, 194);
@@ -29,29 +29,28 @@
   width: 15px;
   height: 17px;
 }
-@media screen and (max-width:880px) {
-  .input{
+
+@media screen and (max-width: 880px) {
+  .input {
     width: 215px;
   }
-  .searchIcon{
+  .searchIcon {
     margin-top: -15px;
     width: 13px;
     height: 15px;
   }
 }
-@media screen and (max-width:580px) {
-  .input{
+@media screen and (max-width: 580px) {
+  .input {
     width: 180px;
     padding: 5px;
     padding-left: 30px;
   }
-
 }
-@media screen and (max-width:360px) {
-  .input{
+@media screen and (max-width: 360px) {
+  .input {
     width: 140px;
     padding: 5px;
     padding-left: 30px;
   }
-
 }
