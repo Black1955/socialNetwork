@@ -1,7 +1,5 @@
-import { MouseEventHandler } from "react";
-export interface IButton {
-  text: string;
-  onClick?: MouseEventHandler<HTMLButtonElement>;
+import { ButtonHTMLAttributes, MouseEventHandler } from "react";
+export interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant:
     | "Orange"
     | "Black"

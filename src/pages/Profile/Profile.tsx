@@ -3,7 +3,10 @@ import Posts from "../../components/Posts/Posts";
 import ProfileList from "../../components/ProfileList/ProfileList";
 import ProfileBlock from "../../components/Profile/ProfileBlock";
 import styles from "./Profile.module.scss";
+import { useGetUserQuery } from "../../services/user";
+import { useNavigate } from "react-router-dom";
 const Profile: FC = () => {
+  const navigate = useNavigate();
   const profiles = [
     { userName: "oleg", desc: "hallo, I am oleg", userId: "qwe" },
     { userName: "aboba", desc: "hallo, I am oleg", userId: "qwe" },
@@ -82,9 +85,26 @@ const Profile: FC = () => {
       userId: "qew",
     },
   ];
+  const { data, isFetching, isLoading, error } = useGetUserQuery("illia");
+  if (isFetching || isLoading) {
+    return <h1>oleg</h1>;
+  }
+  if (error) {
+    navigate("/signin");
+  }
   return (
     <div className={styles.profile}>
-      <ProfileBlock id='q' />
+      <ProfileBlock
+        avatar_url={data.avatar_url}
+        back_url={data.back_url}
+        description={data.description}
+        email={data.email}
+        followers={data.followers}
+        following={data.following}
+        id={data.id}
+        name={data.name}
+        nickname={data.nickname}
+      />
       <div className={styles.content}>
         <Posts tabs={tabs} posts={mockPosts} />
         <div style={{ width: "400px" }}>
