@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC,useState } from "react";
 import { IProfile } from "./IProfileBlock";
 import styles from "./ProfileBlock.module.scss";
 import Button from "../../ui/Button/Button";
@@ -8,14 +8,27 @@ import PetList from "../PetsList/PetList";
 import photo from "../../img.jpg";
 import foto from "../../assets/person.png";
 import Avatar from "../../ui/Avatar/Avatar";
+import AddBlog from "../AddBlog/AddBlog";
+import {TbPhotoEdit} from 'react-icons/tb'
 
 const ProfileBlock: FC<IProfile> = ({ id }) => {
+
+  const [file,setFile]=useState<File>()
+
+  const ChangeFiles =(e:React.ChangeEvent<HTMLInputElement>)=>{
+    if(e.target.files) setFile(e.target.files[0])
+ }
+
   return (
     <div className={styles.profile}>
       <div
         className={styles.background}
         style={{ backgroundImage: `url(${photo})` }}
       ></div>
+      <div className={styles.editBg}>
+        <AddBlog id="5" type="file" text='' onChangeAdd={(e)=>ChangeFiles(e)} icon={<TbPhotoEdit style={{color:'white'}}/>}/>
+      </div>
+      
       <div className={styles.wrapper}>
         <div className={styles.profilePhoto}>
           <Avatar url={foto} height={100} width={100} userId={id} />

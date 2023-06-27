@@ -4,11 +4,6 @@ import styles from './AddBlog.module.scss'
 
 const AddBlog : FC<IAddBlog> = ({onChangeAdd,type,text,icon,id,onClickShow}) => {
 
-   
-   
-   
-  
-
     return(
         <div>
             <div className={styles.link}>

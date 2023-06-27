@@ -86,7 +86,7 @@ const Home:FC = () => {
         <div className={styles.left}>
             <div className={styles.blockAdd}>
                 <div className={styles.mr}>
-                  <Avatar width={70} height={70} url={avatar}/>  
+                  <Avatar userId="2" width={70} height={70} url={avatar}/>  
                 </div>
                
                 <AddBlogList/> 
