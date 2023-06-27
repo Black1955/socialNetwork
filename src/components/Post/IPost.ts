@@ -6,7 +6,7 @@ export interface IPost {
   description: string;
   likes: number;
   imgUrl: string;
-  time: string;
+  time: number;
   liked: boolean;
   setLiked?(): void;
   setComented?(): void;

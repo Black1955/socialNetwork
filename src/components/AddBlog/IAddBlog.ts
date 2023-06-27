@@ -1,6 +1,6 @@
 export interface  IAddBlog {
     id:string;
-    url:string;
+    icon:JSX.Element;
     type:string;
     text:string;
     onChangeAdd?(e:React.ChangeEvent<HTMLInputElement>):void;

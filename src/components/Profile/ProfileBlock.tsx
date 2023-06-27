@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC,useState } from "react";
 import { IProfile } from "./IProfileBlock";
 import styles from "./ProfileBlock.module.scss";
 import Button from "../../ui/Button/Button";
@@ -7,6 +7,9 @@ import PetList from "../PetsList/PetList";
 import "dotenv";
 // test imports
 import Avatar from "../../ui/Avatar/Avatar";
+import AddBlog from "../AddBlog/AddBlog";
+import {TbPhotoEdit} from 'react-icons/tb'
+ 
 
 const ProfileBlock: FC<IProfile> = ({
   id,
@@ -18,9 +21,19 @@ const ProfileBlock: FC<IProfile> = ({
   name,
   nickname,
 }) => {
-  const back =
-    import.meta.env.VITE_APP_API_HOSTNAME + "/" + back_url.replace(/\\/g, "/");
+  const back = import.meta.env.VITE_APP_API_HOSTNAME + "/" + back_url.replace(/\\/g, "/");
+   
   console.log(back);
+
+const ProfileBlock: FC<IProfile> = ({ id }) => {
+
+  const [file,setFile]=useState<File>()
+
+  const ChangeFiles =(e:React.ChangeEvent<HTMLInputElement>)=>{
+    if(e.target.files) setFile(e.target.files[0])
+ }
+
+
   return (
     <div className={styles.profile}>
       <div
@@ -29,6 +42,10 @@ const ProfileBlock: FC<IProfile> = ({
           backgroundImage: `url(${back})`,
         }}
       ></div>
+      <div className={styles.editBg}>
+        <AddBlog id="5" type="file" text='' onChangeAdd={(e)=>ChangeFiles(e)} icon={<TbPhotoEdit style={{color:'white'}}/>}/>
+      </div>
+      
       <div className={styles.wrapper}>
         <div className={styles.profilePhoto}>
           <Avatar
