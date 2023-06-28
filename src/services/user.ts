@@ -7,6 +7,18 @@ interface query {
   email: string;
   password: string;
 }
+export interface IUser {
+  name: string;
+  nickame: string;
+  id: number;
+  description: string;
+  followers: number;
+  following: number;
+  avatar_url: string;
+  back_url: string;
+  email: string;
+}
+interface Error {}
 interface query1 extends query {
   nickname: string;
 }
@@ -26,13 +38,26 @@ export const userAPI = API.injectEndpoints({
         body: args,
       }),
     }),
+    refresh: build.query<IUser, Error>({
+      query: () => "/refresh",
+    }),
     getUser: build.query({
       query: arg => ({
         url: `/getuser/${arg}`,
       }),
     }),
+    recomendUser: build.query({
+      query: id => ({
+        url: `/recomenduser/${id}`,
+      }),
+    }),
   }),
 });
 
-export const { useSigninMutation, useSignupMutation, useGetUserQuery } =
-  userAPI;
+export const {
+  useSigninMutation,
+  useSignupMutation,
+  useGetUserQuery,
+  useRefreshQuery,
+  useRecomendUserQuery,
+} = userAPI;

@@ -3,13 +3,20 @@ import { IPosts } from "./IPosts";
 import Tab from "../../ui/Tab/Tab";
 import styles from "./Posts.module.scss";
 import Post from "../Post/Post";
-const Posts: FC<IPosts> = ({ tabs, posts }) => {
+import { useGetPostsQuery } from "../../services/post";
+import { addHostName } from "../../helpFunctions/addHostname";
+const Posts: FC<IPosts> = ({ tabs, id }) => {
   const [valueTab, setValueTab] = useState<string>(tabs[0].value);
-
-  useEffect(() => {
-    console.log(valueTab);
-  }, [valueTab]);
-
+  const { data, isLoading } = useGetPostsQuery({
+    id,
+    limit: "10",
+    page: "0",
+    type: valueTab,
+  });
+  useEffect(() => {}, [valueTab]);
+  if (isLoading) {
+    return <h1>oleg</h1>;
+  }
   return (
     <div className={styles.tabs}>
       <div style={{ display: "flex" }}>
@@ -25,18 +32,18 @@ const Posts: FC<IPosts> = ({ tabs, posts }) => {
         ))}
       </div>
       <div className={styles.posts}>
-        {posts ? (
-          posts.map(post => (
+        {data ? (
+          data.map(post => (
             <Post
               id={post.id}
               comented={post.comented}
               coments={post.coments}
               description={post.description}
               folowed={post.folowed}
-              imgUrl={post.imgUrl}
+              img_url={addHostName(post.img_url)}
               liked={post.liked}
               likes={post.likes}
-              name={post.name}
+              title={post.title}
               time={post.time}
               key={post.id}
               userId={post.userId}

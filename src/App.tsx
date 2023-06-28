@@ -14,7 +14,7 @@ const App: FC = () => {
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path='profile' element={<Profile />} />
+          <Route path='profile/:id' element={<Profile />} />
           <Route path='massages' />
           <Route path='explore' element={<Explore />} />
           <Route path='settings' />

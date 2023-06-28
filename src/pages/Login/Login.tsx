@@ -14,7 +14,7 @@ const Login: FC<ILogin> = () => {
     await signin({ email, password }).unwrap();
   };
   if (data?.access) {
-    navigation("/profile");
+    navigation("/");
   }
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

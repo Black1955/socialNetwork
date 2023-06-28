@@ -1,7 +1,14 @@
+import { IUser } from "./../services/user";
 import { createSlice } from "@reduxjs/toolkit";
 import { userAPI } from "../services/user";
-const initialState = {
+
+interface IInitialState {
+  access: boolean;
+  user: IUser | null;
+}
+const initialState: IInitialState = {
   access: false,
+  user: null,
 };
 
 export const authSlice = createSlice({
@@ -27,6 +34,12 @@ export const authSlice = createSlice({
     builder.addMatcher(userAPI.endpoints.signup.matchRejected, state => {
       state.access = false;
     });
+    builder.addMatcher(
+      userAPI.endpoints.refresh.matchFulfilled,
+      (state, payload) => {
+        state.user = payload.payload;
+      }
+    );
   },
 });
 

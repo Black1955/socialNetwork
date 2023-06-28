@@ -1,5 +1,5 @@
 export interface IProfile {
-  id: string;
+  id: number;
   avatar_url: string;
   back_url: string;
   description: string;

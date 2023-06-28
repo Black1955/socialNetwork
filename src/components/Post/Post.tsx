@@ -14,10 +14,10 @@ const Post: FC<IPost> = ({
   coments,
   comented,
   description,
-  name,
+  title,
   time,
   likes,
-  imgUrl,
+  img_url,
   liked,
   userId,
 }) => {
@@ -26,7 +26,7 @@ const Post: FC<IPost> = ({
       <header className={styles.header}>
         <div className={styles.wrapper}>
           <div className={styles.left}>
-            <p>{name}</p>
+            <p>{title}</p>
 
             {folowed ? null : (
               <button className={styles.folowed}>Follow</button>
@@ -41,7 +41,7 @@ const Post: FC<IPost> = ({
         </div>
       </header>
       <div className={styles.img}>
-        <img className={styles.img} src={imgUrl} alt='' />
+        <img className={styles.img} src={img_url} alt='' />
       </div>
       <footer>
         <div className={styles.wrapper}>

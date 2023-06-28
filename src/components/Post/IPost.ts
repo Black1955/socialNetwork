@@ -1,11 +1,11 @@
 import { IComment } from "../Coments/IComents";
 
 export interface IPost {
-  id: string;
-  name: string;
+  id: number;
+  title: string;
   description: string;
   likes: number;
-  imgUrl: string;
+  img_url: string;
   time: string;
   liked: boolean;
   setLiked?(): void;
@@ -13,6 +13,6 @@ export interface IPost {
   comented: boolean;
   folowed: boolean;
   setFolowed?(): void;
-  userId: string;
+  userId: number;
   coments: IComment[];
 }

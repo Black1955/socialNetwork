@@ -7,7 +7,7 @@ import PetList from "../PetsList/PetList";
 import "dotenv";
 // test imports
 import Avatar from "../../ui/Avatar/Avatar";
-
+import { addHostName } from "../../helpFunctions/addHostname";
 const ProfileBlock: FC<IProfile> = ({
   id,
   avatar_url,
@@ -20,7 +20,6 @@ const ProfileBlock: FC<IProfile> = ({
 }) => {
   const back =
     import.meta.env.VITE_APP_API_HOSTNAME + "/" + back_url.replace(/\\/g, "/");
-  console.log(back);
   return (
     <div className={styles.profile}>
       <div
@@ -32,7 +31,7 @@ const ProfileBlock: FC<IProfile> = ({
       <div className={styles.wrapper}>
         <div className={styles.profilePhoto}>
           <Avatar
-            url={import.meta.env.VITE_APP_API_HOSTNAME + "/" + avatar_url}
+            url={addHostName(avatar_url)}
             height={100}
             width={100}
             userId={id}
