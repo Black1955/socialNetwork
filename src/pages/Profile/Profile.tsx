@@ -34,7 +34,6 @@ const Profile: FC = () => {
   const { data, isFetching, isLoading, error } = useGetUserQuery(id);
   //
   // @ts-ignore
-  console.log(data);
   if (error && error.status == 401) {
     navigate("/signin");
   }

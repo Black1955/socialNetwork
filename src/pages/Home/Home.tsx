@@ -34,55 +34,43 @@ const Home: FC = () => {
   console.log(data);
   return (
     <div className={styles.wrapper}>
-      <div className={styles.left}>
-        <div className={styles.blockAdd}>
-          <div className={styles.mr}>
-            <Avatar
-              width={70}
-              height={70}
-              url={addHostName(avatar_url)}
-              userId={id}
-            />
-          </div>
 
-          <AddBlogList />
-        </div>
-        <Posts tabs={tabs} id={id} />
-      </div>
-      <div className={styles.right}>
-        <div>
-          <h2 className={styles.title}>Check out this blogs</h2>
-          <div>
-            <div className={styles.blog}>
-              <RecommendedBlog userName='Maks' desc='My manager Denis' />
+        <div className={styles.left}>
+            <div className={styles.blockAdd}>
+                <div className={styles.mr}>
+                  <Avatar width={70} height={70} url={addHostName(avatar_url)} id={id}/>  
+                </div>
+               
+                <AddBlogList/> 
             </div>
-
-            <div className={styles.blog}>
-              <RecommendedBlog userName='Maks' desc='My manager Denis' />
+            <Posts tabs={tabs} id={id} />
+        </div>   
+        <div className={styles.right}>
+            <div>
+              <h2 className={styles.title}>Check out this blogs</h2>
+              <div>
+                <div className={styles.blog}>
+                   <RecommendedBlog userName="Maks" desc="My manager Denis" />
+                </div>
+               
+                <div className={styles.blog}>
+                   <RecommendedBlog userName="Maks" desc="My manager Denis"/>
+                </div>
+                <div className={styles.blog}>
+                   <RecommendedBlog userName="Maks" desc="My manager Denis"/>
+                </div>
+              </div>
             </div>
-            <div className={styles.blog}>
-              <RecommendedBlog userName='Maks' desc='My manager Denis' />
+            <div>
+            <h2 className={styles.title2}>Recomended for you</h2>
+              <div>
+                <div className={styles.blog}>
+                  <Post id=5 name='Hooray' description='Description of post 4' likes={40} liked={false}  imgUrl= "https://images.pexels.com/photos/2295744/pexels-photo-2295744.jpeg?cs=srgb&dl=pexels-alex-andrews-2295744.jpg&fm=jpg" time= "2 hours ago" comented = {false} folowed= {false} coments= {[]} />
+                </div>
+               
+                
+              </div>
             </div>
-          </div>
-        </div>
-        <div>
-          <h2 className={styles.title2}>Recomended for you</h2>
-          <div>
-            <div className={styles.blog}>
-              <Post
-                id='5'
-                name='Hooray'
-                description='Description of post 4'
-                likes={40}
-                liked={false}
-                imgUrl=''
-                time='2 hours ago'
-                comented={false}
-                folowed={false}
-                coments={[]}
-              />
-            </div>
-          </div>
         </div>
       </div>
     </div>
