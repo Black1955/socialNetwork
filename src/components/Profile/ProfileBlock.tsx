@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useState } from "react";
 import { IProfile } from "./IProfileBlock";
 import styles from "./ProfileBlock.module.scss";
 import Button from "../../ui/Button/Button";
@@ -18,7 +18,6 @@ import background from "../../assets/user-background.png";
 import { showEditModal, showPhotoModal } from "../../store/modal/modalSlice";
 import { useDispatch } from "react-redux";
 import EditProfile from "../EditProfile/EditProfile";
-import { useFoto } from "../../hooks/useFoto/useFoto";
 import UploadPhoto from "../UploadPhoto/UploadPhoto";
 const ProfileBlock: FC<IProfile> = ({
   id,
@@ -54,7 +53,6 @@ const ProfileBlock: FC<IProfile> = ({
       setFile(e.target.files[0]);
     }
   };
-  const [photo] = useFoto(file!);
   return (
     <div className={styles.profile}>
       <div

@@ -1,4 +1,4 @@
-import { FC, useRef } from "react";
+import { FC } from "react";
 import { IProfileList } from "./IProfileList";
 import styles from "./ProfileList.module.scss";
 import RecommendedBlog from "../../ui/RecommendedBlog/RecommendedBlog";

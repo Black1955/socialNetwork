@@ -1,4 +1,4 @@
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import Posts from "../../components/Posts/Posts";
 import ProfileList from "../../components/ProfileList/ProfileList";
 import ProfileBlock from "../../components/Profile/ProfileBlock";

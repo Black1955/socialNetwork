@@ -1,9 +1,6 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useState } from "react";
 import AddBlog from "../AddBlog/AddBlog";
 import styles from "./AddBlogList.module.scss";
-import photo from "../../assets/photo.png";
-import text from "../../assets/text.png";
-import paperClip from "../../assets/paperclip.png";
 import { BsCamera } from "react-icons/bs";
 import { RxFileText } from "react-icons/rx";
 import CreatePost from "../createPost_modal/CreatePost";

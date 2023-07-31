@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 export const useFoto = (file: File | string | undefined) => {
   const [foto, setFoto] = useState<string | ArrayBuffer | null | undefined>();
