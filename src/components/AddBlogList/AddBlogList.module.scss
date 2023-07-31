@@ -1,70 +1,66 @@
-@import '../../assets/variables.module.scss';
+@import "../../assets/variables.module.scss";
 
 .item {
-    display: flex;
-   
-    justify-content: space-between;
-    max-width: 280px;
+  display: flex;
+
+  max-width: 280px;
 }
-.ml{
-    margin-left: 20px;
+.ml {
+  margin-left: 20px;
 }
 
-.blogText{
-    height: 0;
-    width: 0;
-    padding: 0;
-    opacity: 0;
+.blogText {
+  height: 0;
+  width: 0;
+  padding: 0;
+  opacity: 0;
 }
 
-.transitionText::placeholder{
-    font-size: 17px;
-    
+.transitionText::placeholder {
+  font-size: 17px;
 }
-.wrapper{
-    width: 424px;
+.wrapper {
+  width: 424px;
 }
-.blockShow{
-    position: relative;
-    left: -110px;
-    transition: all ease 1s;
-    opacity: 1;
+.blockShow {
+  position: relative;
+  left: -110px;
+  transition: all ease 1s;
+  opacity: 1;
+  width: 460px;
+  height: 130px;
+  @media screen and (max-width: 1000) {
     width: 460px;
-    height: 130px;
-    @media screen and (max-width:1000) {
-        width: 460px;
-        padding-bottom: 90px;
-    }
+    padding-bottom: 90px;
+  }
 }
-.transitionText{
-    margin-top: 20px;
-    padding-top: 20px;
-    padding-bottom: 15px;
-    padding-left: 20px;
-    width: 100%;
-    outline: none;
-    border-radius: 10px;
-    border:1px solid rgb(201, 201, 201);
-    font-size: 18px;
-   
+.transitionText {
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  width: 100%;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid rgb(201, 201, 201);
+  font-size: 18px;
 }
-.btn{
-    position: absolute;
-    right: -22px;
-    bottom: 1px;
-    border-radius: 0px 0px 10px 0px;
-    padding: 10px 40px;
-    outline: none;
-    border:none;
-    font-size: 15px;
-    font-family: 'Readex Pro';
-    background: $YELLOW-ORANGE;
-
+.btn {
+  position: absolute;
+  right: -22px;
+  bottom: 1px;
+  border-radius: 0px 0px 10px 0px;
+  padding: 10px 40px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  font-family: "Readex Pro";
+  background: $YELLOW-ORANGE;
 }
-.paperclip{
-    width: 20px;
-    height: 20px;
-    right: 110px;
-    bottom: 10px;
-    position: absolute;
+.paperclip {
+  width: 20px;
+  height: 20px;
+  right: 110px;
+  bottom: 10px;
+  position: absolute;
 }

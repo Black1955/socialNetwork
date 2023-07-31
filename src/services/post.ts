@@ -1,11 +1,6 @@
 import { API } from "./Api";
 import { IPost } from "../components/Post/IPost";
-interface IrecomendPosts {
-  id: string | number | undefined;
-  limit: string;
-  page: string;
-  type: string;
-}
+import { IrecomendPosts, likeBody, likeres } from "./post_types";
 
 export const userAPI = API.injectEndpoints({
   endpoints: build => ({
@@ -14,7 +9,34 @@ export const userAPI = API.injectEndpoints({
         url: `/posts/recomendposts/${id}?limit=${limit}&page=${page}&type=${type}`,
       }),
     }),
+    likePost: build.mutation<likeres, likeBody>({
+      query: body => ({
+        url: "/posts/like",
+        method: "POST",
+        body: body,
+      }),
+    }),
+    disLikePost: build.mutation<likeres, likeBody>({
+      query: body => ({
+        url: "/posts/dislike",
+        method: "POST",
+        body: body,
+      }),
+    }),
+    createPost: build.mutation({
+      query: body => ({
+        url: "/posts/create",
+        method: "POST",
+        body: body,
+      }),
+    }),
   }),
 });
 
-export const { useGetPostsQuery } = userAPI;
+export const {
+  useGetPostsQuery,
+  useLazyGetPostsQuery,
+  useLikePostMutation,
+  useDisLikePostMutation,
+  useCreatePostMutation,
+} = userAPI;

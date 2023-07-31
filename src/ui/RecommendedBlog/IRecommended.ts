@@ -1,5 +1,6 @@
 export interface IReCommended {
-  userName: string;
-  desc: string;
-  userId: number;
+  nickname: string;
+  description: string;
+  id: number;
+  avatar_url: string;
 }

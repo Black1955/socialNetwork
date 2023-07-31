@@ -1,17 +1,15 @@
-import styles from './Input.module.scss';
-import { useState } from 'react';
+import styles from "./Input.module.scss";
 import { FC } from "react";
-import { IInput } from './IInput';
-import * as React from 'react';
+import { IInput } from "./IInput";
 
-const  Input :FC<IInput> = ({placeholder,border,onChangeInput,value}) =>
-{
-
-
+const Input: FC<IInput> = ({ border, ...rest }) => {
   return (
-
-    <input type="text" className={`${styles.input}   ${styles[border]}`} value={value}  onChange={(e:React.ChangeEvent<HTMLInputElement>)=>onChangeInput(e)} placeholder={placeholder} />
+    <input
+      {...rest}
+      type='text'
+      className={`${styles.input}   ${styles[border]}`}
+    />
   );
-}
+};
 
 export default Input;

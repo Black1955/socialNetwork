@@ -3,17 +3,27 @@ import { IReCommended } from "./IRecommended";
 import styles from "./RecommendedBlog.module.scss";
 import { GrFormClose } from "react-icons/gr";
 import Avatar from "../Avatar/Avatar";
-import img from "../../img.jpg";
+import { addHostName } from "../../helpFunctions/addHostname";
 
-const RecommendedBlog: FC<IReCommended> = ({ userName, desc, userId }) => {
+const RecommendedBlog: FC<IReCommended> = ({
+  nickname,
+  id,
+  description,
+  avatar_url,
+}) => {
   return (
     <div className={styles.blog}>
       <div className={styles.blogWrapper}>
         <div className={styles.left}>
-          <Avatar width={45} height={45} url={img} userId={userId} />
+          <Avatar
+            width={45}
+            height={45}
+            url={addHostName(avatar_url)}
+            userId={id}
+          />
           <div className={styles.text}>
-            <h3 className={styles.userName}>{userName}</h3>
-            <p className={styles.desc}>{desc}</p>
+            <h3 className={styles.userName}>{nickname}</h3>
+            <p className={styles.desc}>{description}</p>
           </div>
         </div>
         <div className={styles.right}>

@@ -1,31 +1,33 @@
-@import '../../assets/variables.module.scss';
-@import url('https://fonts.googleapis.com/css2?family=Jura&family=Readex+Pro:wght@300;400;500;600;700&display=swap');
+@import "../../assets/variables.module.scss";
+@import url("https://fonts.googleapis.com/css2?family=Jura&family=Readex+Pro:wght@300;400;500;600;700&display=swap");
 
-.input{
-    display: none;
+.input {
+  display: none;
 }
-.item{
-    width: 90px;
-    height: 65px;
-    border-radius: 15px;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: rgb(255, 255, 255);
-    img{
-        width: 30px;
-        height: 30px;
-        
-    }
-    h3{
-        margin: 0;
-        margin-top: 12px;
-    }
+.item {
+  min-width: 20px;
+  min-height: 20px;
+  max-width: 100px;
+
+  cursor: pointer;
+  border-radius: 15px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  img {
+    width: 30px;
+    height: 30px;
+  }
+  h3 {
+    margin: 0;
+    margin-top: 12px;
+  }
 }
 .item svg {
-    width: 25px;
-    height: 25px;
-    color:$YELLOW-ORANGE;
+  width: 25px;
+  height: 25px;
+  color: $YELLOW-ORANGE;
 }

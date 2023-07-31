@@ -1,53 +1,50 @@
-input{
-  
-    background: white;
-    width: 100%;
+input {
+  background: white;
+  width: 100%;
   border-radius: 20px;
-max-width: 460px;
-width: 100%;
-padding-left: 50px;
-    height: 30px;
-    outline: none;
-    border: 1.5px solid #eaeae7;
-
-   
+  max-width: 460px;
+  width: 100%;
+  padding-left: 50px;
+  height: 30px;
+  outline: none;
+  border: 1.5px solid #eaeae7;
 }
 
-input:focus{
-    border: 1.5px solid #f7d399;
+input:focus {
+  border: 1.5px solid #f7d399;
 }
 
-input::placeholder{
-    color: #d8d9d7;
-    font-weight: 500;
+input::placeholder {
+  color: #d8d9d7;
+  font-weight: 500;
 }
-.preInput{
-    position: absolute;
-    top: 7px;
-    
-    left: 15px;
-    display: flex;
-    align-items: center;
-    color: rgb(222, 223, 220)
+.preInput {
+  position: absolute;
+  top: 7px;
+
+  left: 15px;
+  display: flex;
+  align-items: center;
+  color: rgb(222, 223, 220);
 }
 
-.parent{
-    position: relative;
-    max-width: 500px;
+.parent {
+  position: relative;
+  max-width: 500px;
 }
 
-button{
-    background: #f7d399;
-    border: none;
-    border-radius: 50%;
-    width: 23px;
-    height: 23px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+button {
+  background: #f7d399;
+  border: none;
+  border-radius: 50%;
+  width: 23px;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.nextInput{
-    position: absolute;
-    right: 3px;
-    top: 6px;
+.nextInput {
+  position: absolute;
+  right: 3px;
+  top: 6px;
 }

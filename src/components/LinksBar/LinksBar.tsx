@@ -5,8 +5,10 @@ import { FaTelegramPlane, FaRegCompass } from "react-icons/fa";
 import { RiSettings5Fill } from "react-icons/ri";
 import "./LinksBar.scss";
 import { NavLink } from "react-router-dom";
+import { useAppSelector } from "../../hooks/useAppSelect/useAppSelector";
 
 const LinksBar = () => {
+  const { id } = useAppSelector(state => state.auth.user!);
   return (
     <div className='LinksBar'>
       <NavLink to={"/"} className='link'>
@@ -14,7 +16,7 @@ const LinksBar = () => {
           {window.innerWidth < 980 ? "" : "Home"}
         </Button>
       </NavLink>
-      <NavLink to={"/profile"} className='link'>
+      <NavLink to={`/profile/${id}`} className='link'>
         <Button variant='Icon' icon={<BsPersonCircle />}>
           {window.innerWidth < 980 ? "" : "Profile"}
         </Button>

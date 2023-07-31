@@ -1,0 +1,16 @@
+.searchProfile {
+  display: flex;
+  height: 40px;
+  padding: 8px;
+  width: 100%;
+  border-radius: 10px;
+  align-items: center;
+}
+
+.searchProfile:hover {
+  background-color: #e1e1e1;
+}
+
+.nickname {
+  margin-left: 20px;
+}

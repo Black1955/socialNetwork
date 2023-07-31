@@ -1,6 +1,6 @@
 import styles from "./Login.module.scss";
-import { FC, useState } from "react";
-import { ILogin } from "./ILogin";
+import { FC, useEffect, useState } from "react";
+import { ILogin, YourFormElement } from "./ILogin";
 import logo from "../../assets/logo.png";
 import InputPassword from "../../ui/InputPassword/InputPassword";
 import Input from "../../ui/Input/Input";
@@ -9,29 +9,31 @@ import { useSigninMutation } from "../../services/user";
 const Login: FC<ILogin> = () => {
   const navigation = useNavigate();
   const [signin, { data, isLoading }] = useSigninMutation();
-  const handleSubmit = async (e: any) => {
+
+  const handleSubmit = async (e: React.FormEvent<YourFormElement>) => {
     e.preventDefault();
+    const email = e.currentTarget.elements.email.value;
+    const password = e.currentTarget.elements.password.value;
     await signin({ email, password }).unwrap();
   };
-  if (data?.access) {
-    navigation("/");
-  }
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const onChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
-  };
 
-  const onChangePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPassword(e.target.value);
-  };
+  useEffect(() => {
+    if (data?.access) {
+      navigation("/");
+    }
+  }, [data]);
 
   return (
     <div className={styles.content}>
       {isLoading ? (
         <h1>oleg</h1>
       ) : (
-        <form className={styles.login} onSubmit={handleSubmit}>
+        <form
+          className={styles.login}
+          onSubmit={handleSubmit}
+          name='login'
+          id='login'
+        >
           <div className={styles.wrapper}>
             <div className={styles.logo}>
               <img src={logo} alt='' />
@@ -39,12 +41,11 @@ const Login: FC<ILogin> = () => {
             <div className={styles.inputEmail}>
               <h3>Email</h3>
               <Input
+                type='email'
+                required
+                id='email'
                 variant='Gray'
-                onChangeInput={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  onChangeInput(e)
-                }
                 border='BorderWhite'
-                value={email}
                 placeholder='Email'
               />
             </div>
@@ -52,11 +53,11 @@ const Login: FC<ILogin> = () => {
             <div className={styles.inputPassword}>
               <h3>Password</h3>
               <InputPassword
+                minLength={6}
+                min={6}
+                required
+                id='password'
                 border='BorderWhite'
-                onChangeInput={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  onChangePassword(e)
-                }
-                value={password}
                 placeholder='Password'
               />
             </div>

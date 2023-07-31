@@ -1,16 +1,15 @@
-import styles from './InputPassword.module.scss';
-import { useState } from 'react';
+import styles from "./InputPassword.module.scss";
 import { FC } from "react";
-import { IInputPassword } from './IInputPassword';
-import * as React from 'react';
+import { IInputPassword } from "./IInputPassword";
 
-const  InputPassword :FC<IInputPassword> = ({placeholder,border,onChangeInput,value}) =>
-{
- 
+const InputPassword: FC<IInputPassword> = ({ border, ...rest }) => {
   return (
-
-    <input type="password" className={`${styles.input}   ${styles[border]}`} value={value}   onChange={(e:React.ChangeEvent<HTMLInputElement>)=>onChangeInput(e)}placeholder={placeholder} />
+    <input
+      {...rest}
+      type='password'
+      className={`${styles.input}   ${styles[border]}`}
+    />
   );
-}
+};
 
 export default InputPassword;

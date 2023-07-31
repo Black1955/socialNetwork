@@ -1,4 +1,4 @@
-import { IUser } from "./../services/user";
+import { IUser } from "./../services/users_types";
 import { createSlice } from "@reduxjs/toolkit";
 import { userAPI } from "../services/user";
 

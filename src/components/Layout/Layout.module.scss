@@ -3,6 +3,11 @@
 .container {
   width: 100%;
 }
+.header {
+  top: 0;
+  position: sticky;
+  z-index: 2;
+}
 .wrapper {
   margin: 0 auto;
   max-width: 1400px;
@@ -17,6 +22,8 @@
 .bar {
   margin-top: 20px;
   margin-right: 60px;
+  position: sticky;
+  top: 95px;
 }
 .outlet {
   width: 90%;

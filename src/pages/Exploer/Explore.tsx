@@ -4,31 +4,56 @@ import ProfileList from "../../components/ProfileList/ProfileList";
 import { useAppSelector } from "../../hooks/useAppSelect/useAppSelector";
 const Explore: FC = () => {
   const profiles = [
-    { userName: "oleg", desc: "hallo, I am oleg", userId: 4 },
-    { userName: "aboba", desc: "hallo, I am oleg", userId: 3 },
-    { userName: "alex", desc: "hallo, I am oleg", userId: 9 },
-    { userName: "max", desc: "hallo, I am oleg", userId: 11 },
-    { userName: "aleX", desc: "hallo, I am oleg", userId: 0 },
-    { userName: "alwx", desc: "hallo, I am oleg", userId: 123 },
+    {
+      nickname: "oleg",
+      description: "hallo, I am oleg",
+      id: 1,
+      avatar_url: "",
+    },
+    {
+      nickname: "aboba",
+      description: "hallo, I am oleg",
+      id: 3,
+      avatar_url: "",
+    },
+    {
+      nickname: "alex",
+      description: "hallo, I am oleg",
+      id: 2,
+      avatar_url: "",
+    },
+    { nickname: "max", description: "hallo, I am oleg", id: 5, avatar_url: "" },
+    {
+      nickname: "aleX",
+      description: "hallo, I am oleg",
+      id: 7,
+      avatar_url: "",
+    },
+    {
+      nickname: "alwx",
+      description: "hallo, I am oleg",
+      id: 8,
+      avatar_url: "",
+    },
   ];
   const tabs = [
     {
       text: "Popular",
       name: "explore",
       value: "popular",
-      onChange: (arg: any) => {},
+      onChange: () => {},
     },
     {
       text: "New",
       name: "explore",
       value: "new",
-      onChange: (arg: any) => {},
+      onChange: () => {},
     },
     {
       text: "Your tags",
       name: "explore",
       value: "Your tags",
-      onChange: (arg: any) => {},
+      onChange: () => {},
     },
   ];
   const { id } = useAppSelector(state => state.auth.user!);

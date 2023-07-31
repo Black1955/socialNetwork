@@ -6,13 +6,11 @@ import "./index.scss";
 import { store } from "./store/store.ts";
 import { Provider } from "react-redux";
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <React.StrictMode>
-    <Suspense>
-      <BrowserRouter>
-        <Provider store={store}>
-          <App />
-        </Provider>
-      </BrowserRouter>
-    </Suspense>
-  </React.StrictMode>
+  <Suspense>
+    <BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>
+  </Suspense>
 );

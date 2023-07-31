@@ -1,6 +1,10 @@
-export interface IInputPassword {
-placeholder:string;
-onChangeInput(e:React.ChangeEvent<HTMLInputElement>):void;
-value:string;
-border: 'BorderOrange'| 'BorderBlack' | 'BorderRed' | 'BorderGray'| 'BorderWhite';
+import { InputHTMLAttributes } from "react";
+
+export interface IInputPassword extends InputHTMLAttributes<HTMLInputElement> {
+  border:
+    | "BorderOrange"
+    | "BorderBlack"
+    | "BorderRed"
+    | "BorderGray"
+    | "BorderWhite";
 }

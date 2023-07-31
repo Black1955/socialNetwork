@@ -1,5 +1,27 @@
 .avatar {
   border-radius: 50%;
-  
+  object-fit: cover;
   background: #000;
+}
+.skeleton {
+}
+
+@keyframes animate {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate {
+}
+
+.show {
+  background-color: rgb(199, 199, 199);
+  animation: animate 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.hide {
+  opacity: 0;
+  display: none;
+  appearance: none;
 }

@@ -5,31 +5,39 @@ import styles from "./Layout.module.scss";
 import { useRefreshQuery } from "../../services/user";
 const Layout = () => {
   const navigate = useNavigate();
-  const { isLoading, isSuccess, error } = useRefreshQuery({});
+  const { isLoading, error } = useRefreshQuery({});
+
   if (isLoading) {
-    return <h1>oleg</h1>;
+    return <h1>Loading...</h1>;
   }
+
   //@ts-ignore
-  if (error && error?.status == 401) {
+  if (error && error.status === 401) {
     navigate("/signin");
-  } else
-    return (
-      <div className={styles.layout}>
+    return;
+  }
+
+  return (
+    <div className={styles.layout}>
+      <div className={styles.header}>
         <Header />
-        <div className={styles.container}>
-          <div className={styles.wrapper}>
-            <div className={styles.main}>
+      </div>
+      <div className={styles.container}>
+        <div className={styles.wrapper}>
+          <div className={styles.main}>
+            <div>
               <div className={styles.bar}>
                 <LinksBar />
               </div>
-              <div className={styles.outlet}>
-                <Outlet />
-              </div>
+            </div>
+            <div className={styles.outlet}>
+              <Outlet />
             </div>
           </div>
         </div>
       </div>
-    );
+    </div>
+  );
 };
 
 export default Layout;

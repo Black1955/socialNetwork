@@ -1,40 +1,31 @@
 import styles from "./SignUpForm.module.scss";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import logo from "../../assets/logo.png";
 import InputPassword from "../../ui/InputPassword/InputPassword";
 import Input from "../../ui/Input/Input";
 import { useSignupMutation } from "../../services/user";
 import { useNavigate } from "react-router-dom";
-
+import { YourFormElement } from "./signup";
 const SignUpForm: FC = () => {
   const [signup, { isLoading, data }] = useSignupMutation();
   const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
 
-  const onChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
-  };
-
-  const onChangePassword = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPassword(e.target.value);
-  };
-
-  const onChangeName = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setName(e.target.value);
-  };
-
-  const submitForm = async (e: React.FormEvent<HTMLFormElement>) => {
+  const submitForm = async (e: React.FormEvent<YourFormElement>) => {
+    const name = e.currentTarget.elements.name.value;
+    const email = e.currentTarget.elements.email.value;
+    const password = e.currentTarget.elements.password.value;
     e.preventDefault();
     await signup({ nickname: name, email, password });
   };
   if (isLoading) {
     return <h1>oleg</h1>;
   }
-  if (data?.access) {
-    navigate("/");
-  }
+  useEffect(() => {
+    if (data?.access) {
+      navigate("/");
+    }
+  }, [data]);
+
   return (
     <div className={styles.signUpForm}>
       <form className={styles.login} onSubmit={submitForm}>
@@ -45,12 +36,9 @@ const SignUpForm: FC = () => {
           <div className={styles.inputEmail}>
             <h3>Name</h3>
             <Input
+              id='name'
               variant='Gray'
               border='BorderWhite'
-              value={name}
-              onChangeInput={(e: React.ChangeEvent<HTMLInputElement>) =>
-                onChangeName(e)
-              }
               placeholder='Name'
             />
           </div>
@@ -58,11 +46,8 @@ const SignUpForm: FC = () => {
             <h3>Email</h3>
             <Input
               variant='Gray'
+              id='email'
               border='BorderWhite'
-              value={email}
-              onChangeInput={(e: React.ChangeEvent<HTMLInputElement>) =>
-                onChangeInput(e)
-              }
               placeholder='Email'
             />
           </div>
@@ -70,11 +55,8 @@ const SignUpForm: FC = () => {
           <div className={styles.inputPassword}>
             <h3>Password</h3>
             <InputPassword
+              id='password'
               border='BorderWhite'
-              onChangeInput={(e: React.ChangeEvent<HTMLInputElement>) =>
-                onChangePassword(e)
-              }
-              value={password}
               placeholder='Password'
             />
           </div>

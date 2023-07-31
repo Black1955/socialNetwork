@@ -8,4 +8,5 @@ export interface IProfile {
   following: number;
   name: string;
   nickname: string;
+  followed: boolean;
 }

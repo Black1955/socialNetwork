@@ -1,68 +1,62 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import Posts from "../../components/Posts/Posts";
 import ProfileList from "../../components/ProfileList/ProfileList";
 import ProfileBlock from "../../components/Profile/ProfileBlock";
 import styles from "./Profile.module.scss";
-import { useGetUserQuery } from "../../services/user";
+import { useGetUserQuery, useRecomendUserQuery } from "../../services/user";
 import { useNavigate, useParams } from "react-router-dom";
+import { useAppSelector } from "../../hooks/useAppSelect/useAppSelector";
+import Skeleton from "../../components/Profile/Skeleton";
 const Profile: FC = () => {
+  const { id: myId } = useAppSelector(state => state.auth.user!);
   const navigate = useNavigate();
-  const profiles = [
-    { userName: "oleg", desc: "hallo, I am oleg", userId: 1 },
-    { userName: "aboba", desc: "hallo, I am oleg", userId: 3 },
-    { userName: "alex", desc: "hallo, I am oleg", userId: 2 },
-    { userName: "max", desc: "hallo, I am oleg", userId: 5 },
-    { userName: "aleX", desc: "hallo, I am oleg", userId: 7 },
-    { userName: "alwx", desc: "hallo, I am oleg", userId: 8 },
-  ];
+  const { id } = useParams();
+  const { data, isFetching, isLoading, error } = useGetUserQuery(id);
+  const { data: profiles } = useRecomendUserQuery(myId);
   const tabs = [
     {
       text: "blog",
       name: "profile",
       value: "blog",
-      onChange: (arg: any) => {},
+      onChange: () => {},
     },
     {
       text: "liked",
       name: "profile",
       value: "liked",
-      onChange: (arg: any) => {},
+      onChange: () => {},
     },
   ];
 
-  const { id } = useParams();
-  const { data, isFetching, isLoading, error } = useGetUserQuery(id);
-  //
   // @ts-ignore
   if (error && error.status == 401) {
     navigate("/signin");
   }
   return (
-    <div className={styles.profile}>
-      {isFetching || isLoading ? (
-        <h1>oleg</h1>
-      ) : (
-        <>
-          <ProfileBlock
-            avatar_url={data.avatar_url}
-            back_url={data.back_url}
-            description={data.description}
-            email={data.email}
-            followers={data.followers}
-            following={data.following}
-            id={data.id}
-            name={data.name}
-            nickname={data.nickname}
-          />
-          <div className={styles.content}>
-            <Posts tabs={tabs} id={id} />
-            <div style={{ width: "400px" }}>
-              <ProfileList profiles={profiles} title='Recomend for you' />
-            </div>
-          </div>
-        </>
+    <>
+      {data && (
+        <ProfileBlock
+          avatar_url={data.avatar_url}
+          back_url={data.back_url}
+          description={data.description}
+          email={data.email}
+          followers={data.followers}
+          following={data.following}
+          id={data.id}
+          name={data.name}
+          nickname={data.nickname}
+          followed={data.subscribed}
+        />
       )}
-    </div>
+
+      {(isFetching || isLoading) && <Skeleton />}
+      <div className={styles.content}>
+        <Posts tabs={tabs} id={id} />
+        <div style={{ width: "400px" }}>
+          <ProfileList profiles={profiles} title='Recomend for you' />
+        </div>
+      </div>
+    </>
   );
 };
 

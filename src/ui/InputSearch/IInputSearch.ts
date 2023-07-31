@@ -1,5 +1,2 @@
-export interface IInputSearch {
-placeholder:string;
-onChangeInput?():void;
-value:string;
-}
+import { InputHTMLAttributes } from "react";
+export interface IInputSearch extends InputHTMLAttributes<HTMLInputElement> {}

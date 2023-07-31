@@ -2,11 +2,9 @@ import styles from "./InputSearch.module.scss";
 import { useEffect, useState } from "react";
 import { FC } from "react";
 import { IInputSearch } from "./IInputSearch";
-import * as React from "react";
 import { BsSearch } from "react-icons/bs";
 
-const InputSearch: FC<IInputSearch> = ({ placeholder }) => {
-  const [value, setValue] = useState("");
+const InputSearch: FC<IInputSearch> = ({ ...rest }) => {
   const [isInputVisible, setIsInputVisible] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -47,15 +45,7 @@ const InputSearch: FC<IInputSearch> = ({ placeholder }) => {
       <button className={styles.button}>
         <BsSearch style={{ color: "orange" }} className={styles.searchIcon} />
       </button>
-      <input
-        type='text'
-        className={styles.input}
-        value={value}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-          setValue(e.target.value);
-        }}
-        placeholder={placeholder}
-      />
+      <input type='text' className={styles.input} {...rest} />
     </div>
   );
 };

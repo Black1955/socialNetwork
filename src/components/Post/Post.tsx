@@ -6,6 +6,7 @@ import { AiFillHeart } from "react-icons/ai";
 import { BsFillShareFill } from "react-icons/bs";
 import { IoIosChatboxes } from "react-icons/io";
 import Comments from "../Coments/Coments";
+import { getDate } from "../../helpFunctions/getDate";
 
 const Post: FC<IPost> = ({
   folowed,
@@ -33,7 +34,7 @@ const Post: FC<IPost> = ({
             )}
           </div>
           <div className={styles.right}>
-            <p>{time} {window.innerWidth<1200?'h.r':'hours ago'}</p>
+            <p>{getDate(time)}</p>
             <button className={styles.headerButton}>
               <SlOptions />
             </button>

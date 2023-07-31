@@ -31,6 +31,7 @@
   border: none;
   transition: all 0.5s;
   border: none;
+  color: $JET;
 }
 .Gray:hover {
   background-color: $WHITE;
@@ -50,21 +51,19 @@
   background-color: none;
 }
 
-@media screen and (max-width:980px) {
-  .icon{
-  svg{
- width: 25px;
-  height: 25px;
+@media screen and (max-width: 980px) {
+  .icon {
+    svg {
+      width: 25px;
+      height: 25px;
+    }
   }
- 
 }
-}
-@media screen and (max-width:800px) {
-  .icon{
-  svg{
- width: 20px;
-  height: 20px;
+@media screen and (max-width: 800px) {
+  .icon {
+    svg {
+      width: 20px;
+      height: 20px;
+    }
   }
- 
-}
 }
