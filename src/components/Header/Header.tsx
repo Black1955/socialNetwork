@@ -1,5 +1,4 @@
 import logo from "../../assets/logo.png";
-import InputSearch from "../../ui/InputSearch/InputSearch";
 import styles from "./Header.module.scss";
 import Nav from "../Nav/Nav";
 import FindUser from "../FindUser/FindUser";

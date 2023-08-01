@@ -1,5 +1,5 @@
 import styles from "./SignUpForm.module.scss";
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect } from "react";
 import logo from "../../assets/logo.png";
 import InputPassword from "../../ui/InputPassword/InputPassword";
 import Input from "../../ui/Input/Input";
@@ -17,15 +17,16 @@ const SignUpForm: FC = () => {
     e.preventDefault();
     await signup({ nickname: name, email, password });
   };
-  if (isLoading) {
-    return <h1>oleg</h1>;
-  }
+
   useEffect(() => {
     if (data?.access) {
       navigate("/");
     }
   }, [data]);
 
+  if (isLoading) {
+    return <h1>oleg</h1>;
+  }
   return (
     <div className={styles.signUpForm}>
       <form className={styles.login} onSubmit={submitForm}>

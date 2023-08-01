@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { useAppSelector } from "../../hooks/useAppSelect/useAppSelector";
 import styles from "./EditProfile.module.scss";
 import { GrClose } from "react-icons/gr";

@@ -17,8 +17,6 @@ const PostPhoto: FC<IPostPhoto> = ({
   name,
   time,
   likes,
-  title,
-  subtitle,
   liked,
 }) => {
   return (

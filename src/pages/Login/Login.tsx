@@ -1,5 +1,5 @@
 import styles from "./Login.module.scss";
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect } from "react";
 import { ILogin, YourFormElement } from "./ILogin";
 import logo from "../../assets/logo.png";
 import InputPassword from "../../ui/InputPassword/InputPassword";

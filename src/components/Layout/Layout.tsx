@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import LinksBar from "../LinksBar/LinksBar";
 import Header from "../Header/Header";
@@ -7,14 +8,15 @@ const Layout = () => {
   const navigate = useNavigate();
   const { isLoading, error } = useRefreshQuery({});
 
+  useEffect(() => {
+    //@ts-ignore
+    if (error && error.status === 401) {
+      navigate("/signin");
+    }
+  }, [error, navigate]);
+
   if (isLoading) {
     return <h1>Loading...</h1>;
-  }
-
-  //@ts-ignore
-  if (error && error.status === 401) {
-    navigate("/signin");
-    return;
   }
 
   return (

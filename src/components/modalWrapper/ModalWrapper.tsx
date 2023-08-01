@@ -1,4 +1,4 @@
-import { AllHTMLAttributes, FC, ReactNode, useEffect } from "react";
+import { AllHTMLAttributes, FC, ReactNode } from "react";
 import styles from "./modalWrapper.module.scss";
 interface IModal extends AllHTMLAttributes<HTMLDivElement> {
   children: ReactNode;

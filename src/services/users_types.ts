@@ -1,4 +1,3 @@
-import { filetype } from "../components/UploadPhoto/Upload";
 export interface res {
   access: boolean;
 }
