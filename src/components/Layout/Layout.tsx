@@ -6,7 +6,7 @@ import styles from "./Layout.module.scss";
 import { useRefreshQuery } from "../../services/user";
 const Layout = () => {
   const navigate = useNavigate();
-  const { isLoading, error } = useRefreshQuery({});
+  const { isLoading, error, data } = useRefreshQuery({});
 
   useEffect(() => {
     //@ts-ignore
@@ -20,25 +20,29 @@ const Layout = () => {
   }
 
   return (
-    <div className={styles.layout}>
-      <div className={styles.header}>
-        <Header />
-      </div>
-      <div className={styles.container}>
-        <div className={styles.wrapper}>
-          <div className={styles.main}>
-            <div>
-              <div className={styles.bar}>
-                <LinksBar />
+    <>
+      {data && (
+        <div className={styles.layout}>
+          <div className={styles.header}>
+            <Header />
+          </div>
+          <div className={styles.container}>
+            <div className={styles.wrapper}>
+              <div className={styles.main}>
+                <div>
+                  <div className={styles.bar}>
+                    <LinksBar />
+                  </div>
+                </div>
+                <div className={styles.outlet}>
+                  <Outlet />
+                </div>
               </div>
-            </div>
-            <div className={styles.outlet}>
-              <Outlet />
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      )}
+    </>
   );
 };
 
