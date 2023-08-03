@@ -1,0 +1,1 @@
+import{j as t}from"./index-5d0c194e.js";const n="_input_f6w0u_1",d="_BorderBlack_f6w0u_11",B="_BorderOrange_f6w0u_15",_="_BorderRed_f6w0u_19",s="_BorderGray_f6w0u_23",u="_BorderWhite_f6w0u_27",r={input:n,BorderBlack:d,BorderOrange:B,BorderRed:_,BorderGray:s,BorderWhite:u},c=({border:e,...o})=>t.jsx("input",{...o,type:"text",className:`${r.input}   ${r[e]}`});export{c as I};
